@@ -12,6 +12,8 @@
 		4D832BEC2654414900752AF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832BEB2654414900752AF8 /* ViewController.swift */; };
 		4D832BF12654414C00752AF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D832BF02654414C00752AF8 /* Assets.xcassets */; };
 		4D832BF42654414C00752AF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D832BF22654414C00752AF8 /* LaunchScreen.storyboard */; };
+		4D832C0026544D4F00752AF8 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832BFF26544D4F00752AF8 /* ItemListViewController.swift */; };
+		4D832C0226544D8400752AF8 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832C0126544D8400752AF8 /* ItemListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		4D832BF02654414C00752AF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D832BF32654414C00752AF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D832BF52654414C00752AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D832BFF26544D4F00752AF8 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		4D832C0126544D8400752AF8 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		4D832BE62654414900752AF8 /* Minha Lista */ = {
 			isa = PBXGroup;
 			children = (
+				4D832BFB265444D200752AF8 /* APP */,
 				4D832BE72654414900752AF8 /* AppDelegate.swift */,
 				4D832BE92654414900752AF8 /* SceneDelegate.swift */,
 				4D832BEB2654414900752AF8 /* ViewController.swift */,
@@ -62,6 +67,39 @@
 				4D832BF52654414C00752AF8 /* Info.plist */,
 			);
 			path = "Minha Lista";
+			sourceTree = "<group>";
+		};
+		4D832BFB265444D200752AF8 /* APP */ = {
+			isa = PBXGroup;
+			children = (
+				4D832BFC265444DD00752AF8 /* MODULE */,
+			);
+			path = APP;
+			sourceTree = "<group>";
+		};
+		4D832BFC265444DD00752AF8 /* MODULE */ = {
+			isa = PBXGroup;
+			children = (
+				4D832BFD2654450D00752AF8 /* ITEMLIST */,
+			);
+			path = MODULE;
+			sourceTree = "<group>";
+		};
+		4D832BFD2654450D00752AF8 /* ITEMLIST */ = {
+			isa = PBXGroup;
+			children = (
+				4D832BFE26544D2E00752AF8 /* VIEW */,
+			);
+			path = ITEMLIST;
+			sourceTree = "<group>";
+		};
+		4D832BFE26544D2E00752AF8 /* VIEW */ = {
+			isa = PBXGroup;
+			children = (
+				4D832BFF26544D4F00752AF8 /* ItemListViewController.swift */,
+				4D832C0126544D8400752AF8 /* ItemListView.swift */,
+			);
+			path = VIEW;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,7 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D832C0226544D8400752AF8 /* ItemListView.swift in Sources */,
 				4D832BEC2654414900752AF8 /* ViewController.swift in Sources */,
+				4D832C0026544D4F00752AF8 /* ItemListViewController.swift in Sources */,
 				4D832BE82654414900752AF8 /* AppDelegate.swift in Sources */,
 				4D832BEA2654414900752AF8 /* SceneDelegate.swift in Sources */,
 			);
