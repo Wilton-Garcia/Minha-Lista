@@ -11,6 +11,14 @@ class  ListCell: UITableViewCell {
     
     //MARK: - Private properties
     
+    private let viewCellContent: UIView = {
+       let uiView = UIView()
+        uiView.backgroundColor = .systemGray2
+        uiView.translatesAutoresizingMaskIntoConstraints = false
+        uiView.layer.cornerRadius = 20
+       return uiView
+    }()
+    
     private let labelListName: UILabel = {
         let labelListName = UILabel()
         labelListName.text = "TEST"
@@ -20,39 +28,56 @@ class  ListCell: UITableViewCell {
     
     private let labelListItensCount: UILabel = {
         let labelListItensCount = UILabel()
-        labelListItensCount.text = "01/10"
+        labelListItensCount.text = "04/10"
         labelListItensCount.translatesAutoresizingMaskIntoConstraints = false
         return labelListItensCount
     }()
     
     //MARK: - Private methods
     
-    private func setupLabelListName(){
+    private func setpupViewCellContent(){
         
-        self.addSubview(labelListName)
+        self.addSubview(viewCellContent)
         
         NSLayoutConstraint.activate([
-            labelListName.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            labelListName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            labelListName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10)
+            viewCellContent.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            viewCellContent.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            viewCellContent.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            viewCellContent.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
+        ])
+        
+    }
+    
+    private func setupLabelListName(){
+        
+        viewCellContent.addSubview(labelListName)
+        
+        NSLayoutConstraint.activate([
+            labelListName.topAnchor.constraint(equalTo: viewCellContent.topAnchor, constant: 10),
+            labelListName.trailingAnchor.constraint(equalTo: viewCellContent.trailingAnchor, constant: -10),
+            labelListName.leadingAnchor.constraint(equalTo: viewCellContent.leadingAnchor, constant: 10)
         ])
     }
     private func setuplabelListItensCount(){
         
-        self.addSubview(labelListItensCount)
+        viewCellContent.addSubview(labelListItensCount)
         
         NSLayoutConstraint.activate([
-            labelListItensCount.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            labelListItensCount.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            labelListItensCount.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
+            labelListItensCount.trailingAnchor.constraint(equalTo: viewCellContent.trailingAnchor, constant: -10),
+            labelListItensCount.leadingAnchor.constraint(equalTo: viewCellContent.leadingAnchor, constant: 10),
+            labelListItensCount.bottomAnchor.constraint(equalTo: viewCellContent.bottomAnchor, constant: -10)
         ])
     }
     
+    //MARK: - Init
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: "listCell")
+  
+        setpupViewCellContent()
         setupLabelListName()
         setuplabelListItensCount()
+        
         self.backgroundColor = .clear
     }
     

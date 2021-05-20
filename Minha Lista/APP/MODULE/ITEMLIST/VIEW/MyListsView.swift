@@ -20,8 +20,8 @@ class MyListsView : UIView{
     
     private let tableViewMyLists: UITableView = {
         let myLists = UITableView()
-        myLists.register(ListCell.self, forCellReuseIdentifier: "listCell")
-        myLists.backgroundColor = .blue
+        myLists.backgroundColor = .clear
+        myLists.allowsSelection = false
         myLists.translatesAutoresizingMaskIntoConstraints = false
         return myLists
     }()
@@ -52,7 +52,7 @@ class MyListsView : UIView{
     }
     
     private func setupLayout(){
-        backgroundColor = .systemBlue
+        backgroundColor = .systemGray
         setupLogoText()
         setupMyListTableView()
     }
@@ -70,18 +70,24 @@ class MyListsView : UIView{
     //MARK: - Extensions
 extension  MyListsView : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        4
+        10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewMyLists.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! ListCell
+        addExtaLayoutConfigsToTableView()
         return cell
+    }
+    
+    private func addExtaLayoutConfigsToTableView(){
+        tableViewMyLists.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableViewMyLists.backgroundColor = .none
     }
     
     
 }
 extension MyListsView: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        150
+        100
     }
 }
