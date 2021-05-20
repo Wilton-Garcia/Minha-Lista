@@ -16,6 +16,7 @@
 		4D832C0226544D8400752AF8 /* MyListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832C0126544D8400752AF8 /* MyListsView.swift */; };
 		4D832C05265456D500752AF8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832C04265456D500752AF8 /* Item.swift */; };
 		4D832C07265456EC00752AF8 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832C06265456EC00752AF8 /* ItemList.swift */; };
+		4D832C092655F0E300752AF8 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832C082655F0E300752AF8 /* ListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4D832C0126544D8400752AF8 /* MyListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListsView.swift; sourceTree = "<group>"; };
 		4D832C04265456D500752AF8 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4D832C06265456EC00752AF8 /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
+		4D832C082655F0E300752AF8 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				4D832BFF26544D4F00752AF8 /* MyListsViewController.swift */,
 				4D832C0126544D8400752AF8 /* MyListsView.swift */,
+				4D832C082655F0E300752AF8 /* ListCell.swift */,
 			);
 			path = VIEW;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				4D832C0026544D4F00752AF8 /* MyListsViewController.swift in Sources */,
 				4D832C07265456EC00752AF8 /* ItemList.swift in Sources */,
 				4D832BE82654414900752AF8 /* AppDelegate.swift in Sources */,
+				4D832C092655F0E300752AF8 /* ListCell.swift in Sources */,
 				4D832C05265456D500752AF8 /* Item.swift in Sources */,
 				4D832BEA2654414900752AF8 /* SceneDelegate.swift in Sources */,
 			);
