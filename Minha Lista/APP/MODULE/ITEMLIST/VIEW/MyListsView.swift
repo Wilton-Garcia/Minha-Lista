@@ -21,7 +21,7 @@ class MyListsView : UIView{
     private let tableViewMyLists: UITableView = {
         let myLists = UITableView()
         myLists.register(ListCell.self, forCellReuseIdentifier: "listCell")
-        myLists.backgroundColor = .systemPink
+        myLists.backgroundColor = .blue
         myLists.translatesAutoresizingMaskIntoConstraints = false
         return myLists
     }()
@@ -40,10 +40,13 @@ class MyListsView : UIView{
     private func setupMyListTableView(){
         self.addSubview(tableViewMyLists)
         
+        tableViewMyLists.register(ListCell.self, forCellReuseIdentifier: "listCell")
+        
         NSLayoutConstraint.activate([
-            tableViewMyLists.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 100),
+            tableViewMyLists.topAnchor.constraint(equalTo: labelListName.topAnchor, constant: 100),
             tableViewMyLists.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            tableViewMyLists.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 10)
+            tableViewMyLists.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            tableViewMyLists.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
         
     }
@@ -58,7 +61,8 @@ class MyListsView : UIView{
     //MARK: - Init
         convenience init() {
             self.init(frame:.zero)
-            
+            tableViewMyLists.delegate = self
+            tableViewMyLists.dataSource = self
            setupLayout()
         }
 }

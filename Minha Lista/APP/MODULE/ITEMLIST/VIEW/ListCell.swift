@@ -32,10 +32,9 @@ class  ListCell: UITableViewCell {
         self.addSubview(labelListName)
         
         NSLayoutConstraint.activate([
-            labelListName.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            labelListName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            labelListName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 5)
-        
+            labelListName.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            labelListName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            labelListName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10)
         ])
     }
     private func setuplabelListItensCount(){
@@ -43,10 +42,9 @@ class  ListCell: UITableViewCell {
         self.addSubview(labelListItensCount)
         
         NSLayoutConstraint.activate([
-            labelListItensCount.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            labelListItensCount.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 5),
-            labelListItensCount.topAnchor.constraint(equalTo: bottomAnchor, constant: 5),
-        
+            labelListItensCount.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            labelListItensCount.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            labelListItensCount.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
     }
     
@@ -55,6 +53,11 @@ class  ListCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: "listCell")
         setupLabelListName()
         setuplabelListItensCount()
+        self.backgroundColor = .clear
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
     
     required init?(coder: NSCoder) {
