@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ItemListViewController : UIViewController{
-    private let targetView =  ItemListView()
+class MyListsViewController : UIViewController{
+    private let targetView =  MyListsView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
