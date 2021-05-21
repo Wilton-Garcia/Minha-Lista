@@ -40,7 +40,7 @@ class MyListsView : UIView{
     private func setupMyListTableView(){
         self.addSubview(tableViewMyLists)
         
-        tableViewMyLists.register(ListCell.self, forCellReuseIdentifier: "listCell")
+        tableViewMyLists.register(ListCellView.self, forCellReuseIdentifier: "listCell")
         
         NSLayoutConstraint.activate([
             tableViewMyLists.topAnchor.constraint(equalTo: labelListName.topAnchor, constant: 100),
@@ -74,7 +74,7 @@ extension  MyListsView : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableViewMyLists.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! ListCell
+        let cell = tableViewMyLists.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! ListCellView
         addExtaLayoutConfigsToTableView()
         return cell
     }

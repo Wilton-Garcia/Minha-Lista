@@ -7,7 +7,7 @@
 
 import UIKit
 
-class  ListCell: UITableViewCell {
+class  ListCellView: UITableViewCell {
     
     //MARK: - Private properties
     

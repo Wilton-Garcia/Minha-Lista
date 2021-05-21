@@ -16,7 +16,7 @@
 		4D832C0226544D8400752AF8 /* MyListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832C0126544D8400752AF8 /* MyListsView.swift */; };
 		4D832C05265456D500752AF8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832C04265456D500752AF8 /* Item.swift */; };
 		4D832C07265456EC00752AF8 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832C06265456EC00752AF8 /* ItemList.swift */; };
-		4D832C092655F0E300752AF8 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832C082655F0E300752AF8 /* ListCell.swift */; };
+		4D832C092655F0E300752AF8 /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832C082655F0E300752AF8 /* ListCellView.swift */; };
 		4DD52D1126583F480034CDA4 /* Minha_ListaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD52D1026583F480034CDA4 /* Minha_ListaTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +42,7 @@
 		4D832C0126544D8400752AF8 /* MyListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListsView.swift; sourceTree = "<group>"; };
 		4D832C04265456D500752AF8 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4D832C06265456EC00752AF8 /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
-		4D832C082655F0E300752AF8 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		4D832C082655F0E300752AF8 /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
 		4DD52D0E26583F480034CDA4 /* Minha ListaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Minha ListaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DD52D1026583F480034CDA4 /* Minha_ListaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minha_ListaTests.swift; sourceTree = "<group>"; };
 		4DD52D1226583F480034CDA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +109,7 @@
 		4D832BFC265444DD00752AF8 /* MODULES */ = {
 			isa = PBXGroup;
 			children = (
+				4DD52D19265854220034CDA4 /* MYLISTS */,
 				4D832BFD2654450D00752AF8 /* ITEMLIST */,
 			);
 			path = MODULES;
@@ -117,6 +118,7 @@
 		4D832BFD2654450D00752AF8 /* ITEMLIST */ = {
 			isa = PBXGroup;
 			children = (
+				4DD52D18265852980034CDA4 /* INTERACTOR */,
 				4D832C03265456C100752AF8 /* ENTITY */,
 				4D832BFE26544D2E00752AF8 /* VIEW */,
 			);
@@ -126,9 +128,6 @@
 		4D832BFE26544D2E00752AF8 /* VIEW */ = {
 			isa = PBXGroup;
 			children = (
-				4D832BFF26544D4F00752AF8 /* MyListsViewController.swift */,
-				4D832C0126544D8400752AF8 /* MyListsView.swift */,
-				4D832C082655F0E300752AF8 /* ListCell.swift */,
 			);
 			path = VIEW;
 			sourceTree = "<group>";
@@ -149,6 +148,39 @@
 				4DD52D1226583F480034CDA4 /* Info.plist */,
 			);
 			path = "Minha ListaTests";
+			sourceTree = "<group>";
+		};
+		4DD52D18265852980034CDA4 /* INTERACTOR */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = INTERACTOR;
+			sourceTree = "<group>";
+		};
+		4DD52D19265854220034CDA4 /* MYLISTS */ = {
+			isa = PBXGroup;
+			children = (
+				4DD52D1B265854470034CDA4 /* ENTITY */,
+				4DD52D1A2658543E0034CDA4 /* VIEW */,
+			);
+			path = MYLISTS;
+			sourceTree = "<group>";
+		};
+		4DD52D1A2658543E0034CDA4 /* VIEW */ = {
+			isa = PBXGroup;
+			children = (
+				4D832BFF26544D4F00752AF8 /* MyListsViewController.swift */,
+				4D832C0126544D8400752AF8 /* MyListsView.swift */,
+				4D832C082655F0E300752AF8 /* ListCellView.swift */,
+			);
+			path = VIEW;
+			sourceTree = "<group>";
+		};
+		4DD52D1B265854470034CDA4 /* ENTITY */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ENTITY;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +287,7 @@
 				4D832C0026544D4F00752AF8 /* MyListsViewController.swift in Sources */,
 				4D832C07265456EC00752AF8 /* ItemList.swift in Sources */,
 				4D832BE82654414900752AF8 /* AppDelegate.swift in Sources */,
-				4D832C092655F0E300752AF8 /* ListCell.swift in Sources */,
+				4D832C092655F0E300752AF8 /* ListCellView.swift in Sources */,
 				4D832C05265456D500752AF8 /* Item.swift in Sources */,
 				4D832BEA2654414900752AF8 /* SceneDelegate.swift in Sources */,
 			);
