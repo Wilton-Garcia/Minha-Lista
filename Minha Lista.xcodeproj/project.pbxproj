@@ -101,17 +101,17 @@
 		4D832BFB265444D200752AF8 /* APP */ = {
 			isa = PBXGroup;
 			children = (
-				4D832BFC265444DD00752AF8 /* MODULE */,
+				4D832BFC265444DD00752AF8 /* MODULES */,
 			);
 			path = APP;
 			sourceTree = "<group>";
 		};
-		4D832BFC265444DD00752AF8 /* MODULE */ = {
+		4D832BFC265444DD00752AF8 /* MODULES */ = {
 			isa = PBXGroup;
 			children = (
 				4D832BFD2654450D00752AF8 /* ITEMLIST */,
 			);
-			path = MODULE;
+			path = MODULES;
 			sourceTree = "<group>";
 		};
 		4D832BFD2654450D00752AF8 /* ITEMLIST */ = {
