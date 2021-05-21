@@ -18,6 +18,7 @@
 		4D832C07265456EC00752AF8 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832C06265456EC00752AF8 /* ItemList.swift */; };
 		4D832C092655F0E300752AF8 /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832C082655F0E300752AF8 /* ListCellView.swift */; };
 		4DD52D1126583F480034CDA4 /* Minha_ListaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD52D1026583F480034CDA4 /* Minha_ListaTests.swift */; };
+		4DD52D1D265855F00034CDA4 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD52D1C265855F00034CDA4 /* Lists.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		4DD52D0E26583F480034CDA4 /* Minha ListaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Minha ListaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DD52D1026583F480034CDA4 /* Minha_ListaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minha_ListaTests.swift; sourceTree = "<group>"; };
 		4DD52D1226583F480034CDA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DD52D1C265855F00034CDA4 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 		4DD52D1B265854470034CDA4 /* ENTITY */ = {
 			isa = PBXGroup;
 			children = (
+				4DD52D1C265855F00034CDA4 /* Lists.swift */,
 			);
 			path = ENTITY;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				4D832C092655F0E300752AF8 /* ListCellView.swift in Sources */,
 				4D832C05265456D500752AF8 /* Item.swift in Sources */,
 				4D832BEA2654414900752AF8 /* SceneDelegate.swift in Sources */,
+				4DD52D1D265855F00034CDA4 /* Lists.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
