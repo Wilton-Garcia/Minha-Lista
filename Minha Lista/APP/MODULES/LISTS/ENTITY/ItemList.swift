@@ -7,10 +7,13 @@
 
 import Foundation
 
-class ItemList {
+class ItemList : NSObject{
     private let ListName: String
     private let ItemList = [Item]()
     
+    public func getListName() -> String{
+        return ListName
+    }
     
     init(ListName: String) {
         self.ListName = ListName

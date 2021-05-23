@@ -7,6 +7,6 @@
 
 import Foundation
 
-class Lists: NSObject {
+class List: NSObject {
     private let Lists = [ItemList]()
 }

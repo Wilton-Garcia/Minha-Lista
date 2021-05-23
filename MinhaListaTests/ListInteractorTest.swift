@@ -1,0 +1,36 @@
+//
+//  MinhaListaTests.swift
+//  MinhaListaTests
+//
+//  Created by Wilton Garcia on 23/05/21.
+//
+
+import XCTest
+
+@testable import Minha_Lista
+
+class ListInteractorTest: XCTestCase {
+    
+    func shouldCreateList(){
+        let li = ListInteractor()
+        li.createList(listName: "Lista e Compras")
+    }
+    
+
+    func testListNameShoulHave3OrMoreChars(){
+        let li = ListInteractor()
+        XCTAssertTrue(li.listNameHas3OrMoreChars(listName: "Lista de Compras"))
+        XCTAssertTrue(li.listNameHas3OrMoreChars(listName: "EPA"))
+        XCTAssertFalse(li.listNameHas3OrMoreChars(listName: "BH"))
+    }
+    
+    
+    func testListNameShouldNotExist(){
+        let li = ListInteractor()
+        let listaDeCompras = ItemList(ListName: "Lista de Compras")
+        VirtualDataBase().insertItemList(ItemList: listaDeCompras)
+        XCTAssertTrue(!li.listNameDoNotExist(listName: "Lista de Compras"))
+        XCTAssertFalse(li.listNameDoNotExist(listName: "Lista de tarefas"))
+    }
+    
+}

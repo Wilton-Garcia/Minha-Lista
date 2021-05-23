@@ -9,8 +9,9 @@ import Foundation
 
 class Item{
     private let ItemName: String
-    
+    private var ItemCheck: Bool
     init(ItemName: String) {
         self.ItemName = ItemName
+        ItemCheck = false
     }
 }
