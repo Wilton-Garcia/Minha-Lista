@@ -12,11 +12,11 @@ class ListInteractor: NSObject {
     public let db = VirtualDataBase()
     
     public func createList(listName: String){
-        
+        db.insertItemList(ItemList: ItemList(ListName: listName))
     }
     
-    public func validateListName(listName: String){
-        
+    public func validateListName(listName: String) -> Bool{
+        return (listNameHas3OrMoreChars(listName: listName) && !listNameExist(listName: listName))
     }
     
     public func listNameHas3OrMoreChars(listName: String) -> Bool{

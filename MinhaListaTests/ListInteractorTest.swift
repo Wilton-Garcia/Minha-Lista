@@ -11,12 +11,14 @@ import XCTest
 
 class ListInteractorTest: XCTestCase {
     
+    private let listName = "Lista de Compras"
+    
     func testShouldCreateList(){
         let li = ListInteractor()
-        li.createList(listName: "Lista e Compras")
+        li.createList(listName: listName)
+        XCTAssertTrue(li.listNameExist(listName: listName))
     }
     
-
     func testListNameShoulHave3OrMoreChars(){
         let li = ListInteractor()
         XCTAssertTrue(li.listNameHas3OrMoreChars(listName: "Lista de Compras"))
@@ -26,18 +28,21 @@ class ListInteractorTest: XCTestCase {
     
     func testListNameShouldNotExist(){
         let li = ListInteractor()
-        let listaDeCompras = ItemList(ListName: "Lista de compras")
-        li.db.insertItemList(ItemList: listaDeCompras)
-        XCTAssertTrue(li.listNameExist(listName: listaDeCompras.getListName()))
+        li.createList(listName: listName)
+        XCTAssertTrue(li.listNameExist(listName: listName ))
         XCTAssertFalse(li.listNameExist(listName: "Lista de tarefas"))
+    }
+    
+    func testValidadeListName() {
+        let li = ListInteractor()
+        XCTAssertTrue(li.validateListName(listName: listName))
     }
     
     func testGetList(){
         let li = ListInteractor()
-        let listaDeCompras = ItemList(ListName: "Lista")
-        li.db.insertItemList(ItemList: listaDeCompras)
-        let listaRetornada = li.getList(listName: listaDeCompras.getListName())
-        XCTAssertEqual(listaDeCompras, listaRetornada)
+        li.createList(listName: listName)
+        let list = li.getList(listName: listName)
+        XCTAssertEqual(listName, list.getListName())
     }
     
 }
