@@ -13,6 +13,7 @@ class MyListsViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = targetView
+        targetView.data = ListInteractor().getAllLists()
     }
     
 }

@@ -10,6 +10,8 @@ import UIKit
 class MyListsView : UIView{
     
     //MARK: - Private properties
+    private let Interactor = ListInteractor()
+    public var data = [ItemList]()
     
     private let labelListName: UILabel = {
         let labelListName = UILabel()
@@ -70,11 +72,13 @@ class MyListsView : UIView{
     //MARK: - Extensions
 extension  MyListsView : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        Interactor.getListsCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewMyLists.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! ListCellView
+        let itemList = data[indexPath.row]
+        cell.fillCell(itemList: itemList)
         addExtaLayoutConfigsToTableView()
         return cell
     }

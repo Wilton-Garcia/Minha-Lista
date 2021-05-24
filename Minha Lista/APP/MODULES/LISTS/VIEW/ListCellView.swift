@@ -21,7 +21,6 @@ class  ListCellView: UITableViewCell {
     
     private let labelListName: UILabel = {
         let labelListName = UILabel()
-        labelListName.text = "TEST"
         labelListName.translatesAutoresizingMaskIntoConstraints = false
         return labelListName
     }()
@@ -67,6 +66,12 @@ class  ListCellView: UITableViewCell {
             labelListItensCount.leadingAnchor.constraint(equalTo: viewCellContent.leadingAnchor, constant: 10),
             labelListItensCount.bottomAnchor.constraint(equalTo: viewCellContent.bottomAnchor, constant: -10)
         ])
+    }
+    
+    //MARK: - Public Methods
+    
+    public func fillCell(itemList: ItemList){
+        labelListName.text = itemList.getListName()
     }
     
     //MARK: - Init

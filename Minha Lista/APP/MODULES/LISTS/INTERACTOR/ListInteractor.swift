@@ -9,17 +9,17 @@ import Foundation
 
 class ListInteractor: NSObject {
     
-    public let db = VirtualDataBase()
+    private let db = VirtualDataBase()
     
     public func createList(listName: String){
         db.insertItemList(ItemList: ItemList(ListName: listName))
     }
     
     public func validateListName(listName: String) -> Bool{
-        return (listNameHas3OrMoreChars(listName: listName) && !listNameExist(listName: listName))
+        return (listNameHas3orMoreChars(listName: listName) && !listNameExist(listName: listName))
     }
     
-    public func listNameHas3OrMoreChars(listName: String) -> Bool{
+    public func listNameHas3orMoreChars(listName: String) -> Bool{
         listName.count >= 3 ? true : false
     }
     
@@ -28,10 +28,21 @@ class ListInteractor: NSObject {
     }
     
     public func getList(listName: String) -> ItemList{
-       return db.getItemByName(ListName: listName)
+       return db.getItemListByName(ListName: listName)
+    }
+    
+    public func getListsCount() -> Int{
+        return db.getItemListCout()
+    }
+    
+    public func getAllLists() -> [ItemList]{
+        return db.getAllItemList()
     }
     
     override init() {
-            
+        super.init()
+        self.createList(listName: "Supermercado")
+        self.createList(listName: "Sacolão")
+        self.createList(listName: "Farmacia")
     }
 }

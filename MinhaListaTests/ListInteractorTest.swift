@@ -21,9 +21,9 @@ class ListInteractorTest: XCTestCase {
     
     func testListNameShoulHave3OrMoreChars(){
         let li = ListInteractor()
-        XCTAssertTrue(li.listNameHas3OrMoreChars(listName: "Lista de Compras"))
-        XCTAssertTrue(li.listNameHas3OrMoreChars(listName: "EPA"))
-        XCTAssertFalse(li.listNameHas3OrMoreChars(listName: "BH"))
+        XCTAssertTrue(li.listNameHas3orMoreChars(listName: "Lista de Compras"))
+        XCTAssertTrue(li.listNameHas3orMoreChars(listName: "EPA"))
+        XCTAssertFalse(li.listNameHas3orMoreChars(listName: "BH"))
     }
     
     func testListNameShouldNotExist(){
@@ -43,6 +43,21 @@ class ListInteractorTest: XCTestCase {
         li.createList(listName: listName)
         let list = li.getList(listName: listName)
         XCTAssertEqual(listName, list.getListName())
+    }
+    
+    func testGetListCount(){
+        let li = ListInteractor()
+        li.createList(listName: listName)
+        XCTAssertEqual(1, li.getListsCount())
+    }
+    
+    func testGetAllLists(){
+        let li = ListInteractor()
+        li.createList(listName: "Lista 1")
+        li.createList(listName: "Lista 2")
+        XCTAssertEqual(2, li.getListsCount())
+        XCTAssertEqual("Lista 1", li.getList(listName: "Lista 1").getListName())
+        XCTAssertEqual("Lista 2", li.getList(listName: "Lista 2").getListName())
     }
     
 }

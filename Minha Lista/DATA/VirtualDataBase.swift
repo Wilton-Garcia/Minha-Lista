@@ -8,12 +8,21 @@
 import Foundation
 
 class VirtualDataBase: NSObject {
-    public var List = [ItemList]()
+    private var List = [ItemList]()
+    
+    public func getAllItemList() -> [ItemList]{
+        return List
+    }
+    
+    public func getItemListCout() -> Int{
+        return List.count
+    }
     
     public func insertItemList(ItemList: ItemList){
         List.append(ItemList)
     }
-    public func getItemByName(ListName: String) -> ItemList{
+    
+    public func getItemListByName(ListName: String) -> ItemList{
         
         for item in List{
             if(item.getListName() == ListName){
@@ -22,6 +31,7 @@ class VirtualDataBase: NSObject {
         }
         return ItemList(ListName: "0")
     }
+    
     public func itemExists(ListName: String) -> Bool{
         for item in List{
             if(item.getListName() == ListName){
