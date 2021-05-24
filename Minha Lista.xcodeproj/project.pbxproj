@@ -75,8 +75,8 @@
 		4D767CC8265AD7B6000661FC /* MinhaListaTests */ = {
 			isa = PBXGroup;
 			children = (
-				4D767CC9265AD7B6000661FC /* ListInteractorTest.swift */,
 				4D767CCB265AD7B6000661FC /* Info.plist */,
+				4D767CC9265AD7B6000661FC /* ListInteractorTest.swift */,
 				4D767CD1265AD7D8000661FC /* VirtualDataBaseTest.swift */,
 			);
 			path = MinhaListaTests;

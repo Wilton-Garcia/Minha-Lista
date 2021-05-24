@@ -13,13 +13,14 @@ class VirtualDataBase: NSObject {
     public func insertItemList(ItemList: ItemList){
         List.append(ItemList)
     }
-    public func getItemByName(ListName: String) -> ItemList?{
+    public func getItemByName(ListName: String) -> ItemList{
+        
         for item in List{
             if(item.getListName() == ListName){
                 return item
             }
         }
-        return nil
+        return ItemList(ListName: "0")
     }
     public func itemExists(ListName: String) -> Bool{
         for item in List{
