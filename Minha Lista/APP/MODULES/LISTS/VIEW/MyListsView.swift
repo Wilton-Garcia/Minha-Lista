@@ -28,6 +28,7 @@ class MyListsView : UIView{
         return myLists
     }()
     
+    
     //MARK: - Private methods
     private func setupLogoText() {
             self.addSubview(labelListName)
@@ -45,7 +46,7 @@ class MyListsView : UIView{
         tableViewMyLists.register(ListCellView.self, forCellReuseIdentifier: "listCell")
         
         NSLayoutConstraint.activate([
-            tableViewMyLists.topAnchor.constraint(equalTo: labelListName.topAnchor, constant: 100),
+            tableViewMyLists.topAnchor.constraint(equalTo: topAnchor, constant: 100),
             tableViewMyLists.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             tableViewMyLists.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             tableViewMyLists.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
@@ -53,11 +54,20 @@ class MyListsView : UIView{
         
     }
     
+
+    
+    @objc public func hello(){
+        
+    }
+    
+    
     private func setupLayout(){
-        backgroundColor = .systemGray
-        setupLogoText()
+        backgroundColor = .white
+       // setupLogoText()
         setupMyListTableView()
     }
+    
+
     
     
     //MARK: - Init
@@ -65,7 +75,7 @@ class MyListsView : UIView{
             self.init(frame:.zero)
             tableViewMyLists.delegate = self
             tableViewMyLists.dataSource = self
-           setupLayout()
+            setupLayout()
         }
 }
 

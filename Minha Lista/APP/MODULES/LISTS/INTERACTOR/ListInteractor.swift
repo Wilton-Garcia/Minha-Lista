@@ -41,5 +41,7 @@ class ListInteractor: NSObject {
     
     override init() {
         super.init()
+        self.createList(listName: "Supermercado")
+        self.createList(listName: "Sacolão")
     }
 }

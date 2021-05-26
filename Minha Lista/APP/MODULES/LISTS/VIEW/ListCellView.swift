@@ -13,7 +13,7 @@ class  ListCellView: UITableViewCell {
     
     private let viewCellContent: UIView = {
        let uiView = UIView()
-        uiView.backgroundColor = .systemGray2
+        uiView.backgroundColor = .systemGray6
         uiView.translatesAutoresizingMaskIntoConstraints = false
         uiView.layer.cornerRadius = 20
        return uiView
