@@ -74,6 +74,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D4B6FD3265F0AB400574F81 /* VIEW */ = {
+			isa = PBXGroup;
+			children = (
+				4D832BFF26544D4F00752AF8 /* MyListsViewController.swift */,
+				4D832C0126544D8400752AF8 /* MyListsView.swift */,
+			);
+			path = VIEW;
+			sourceTree = "<group>";
+		};
+		4D4B6FD4265F0AF500574F81 /* CELLS */ = {
+			isa = PBXGroup;
+			children = (
+				4D832C082655F0E300752AF8 /* ListCellView.swift */,
+			);
+			path = CELLS;
+			sourceTree = "<group>";
+		};
+		4D4B6FD5265F0B0200574F81 /* POPUP */ = {
+			isa = PBXGroup;
+			children = (
+				4D4B6FD1265EFB8B00574F81 /* AddListPopupView.swift */,
+			);
+			path = POPUP;
+			sourceTree = "<group>";
+		};
 		4D767CC8265AD7B6000661FC /* MinhaListaTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,22 +194,21 @@
 		4DD52D19265854220034CDA4 /* LISTS */ = {
 			isa = PBXGroup;
 			children = (
-				4DD52D1A2658543E0034CDA4 /* VIEW */,
+				4DD52D1A2658543E0034CDA4 /* VIEWS */,
 				4DD52D1E2658594C0034CDA4 /* INTERACTOR */,
 				4DD52D1B265854470034CDA4 /* ENTITY */,
 			);
 			path = LISTS;
 			sourceTree = "<group>";
 		};
-		4DD52D1A2658543E0034CDA4 /* VIEW */ = {
+		4DD52D1A2658543E0034CDA4 /* VIEWS */ = {
 			isa = PBXGroup;
 			children = (
-				4D832BFF26544D4F00752AF8 /* MyListsViewController.swift */,
-				4D832C0126544D8400752AF8 /* MyListsView.swift */,
-				4D832C082655F0E300752AF8 /* ListCellView.swift */,
-				4D4B6FD1265EFB8B00574F81 /* AddListPopupView.swift */,
+				4D4B6FD5265F0B0200574F81 /* POPUP */,
+				4D4B6FD4265F0AF500574F81 /* CELLS */,
+				4D4B6FD3265F0AB400574F81 /* VIEW */,
 			);
-			path = VIEW;
+			path = VIEWS;
 			sourceTree = "<group>";
 		};
 		4DD52D1B265854470034CDA4 /* ENTITY */ = {
