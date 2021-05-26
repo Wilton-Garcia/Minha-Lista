@@ -24,7 +24,7 @@ class ListInteractor: NSObject {
     }
     
     public func listNameExist(listName: String) -> Bool{
-        return db.itemExists(ListName: listName)
+        return db.ListExists(ListName: listName)
     }
     
     public func getList(listName: String) -> ItemList{
@@ -41,8 +41,5 @@ class ListInteractor: NSObject {
     
     override init() {
         super.init()
-        self.createList(listName: "Supermercado")
-        self.createList(listName: "Sacolão")
-        self.createList(listName: "Farmacia")
     }
 }

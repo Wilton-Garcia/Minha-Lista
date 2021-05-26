@@ -9,10 +9,25 @@ import Foundation
 
 class ItemList : NSObject{
     private let ListName: String
-    private let ItemList = [Item]()
+    private var ItemList = [Item]()
     
     public func getListName() -> String{
         return ListName
+    }
+    
+    public func AddItem(Item: Item){
+        ItemList.append(Item)
+    }
+    
+    public func getList() -> [Item]{
+        return ItemList
+    }
+    
+    public func getItem(ItemName: String) -> Item{
+        guard let item = ItemList.first(where: {$0.getItemName() == ItemName}) else {
+            return Item(ItemName: "0")
+        }
+        return item
     }
     
     init(ListName: String) {
