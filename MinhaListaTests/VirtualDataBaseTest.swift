@@ -61,17 +61,18 @@ class VirtualDataBaseTest: XCTestCase {
         XCTAssertEqual(1,vdb.getItemsInListCount(ListName: listaDeCompras.getListName()) )
       
     }
-    /*
+
     
     func testShouldReturnItem(){
         let vdb = VirtualDataBase()
         let listaDeCompras = ItemList(ListName: "Lista de Compras")
         let pacoteDeArroz = Item(ItemName: "Pacote de Arroz 5 KG")
+        vdb.insertItemList(ItemList: listaDeCompras)
         vdb.insertItemInList(ListName: listaDeCompras.getListName(), item: pacoteDeArroz)
         let nomeItemRetornado = vdb.getItemInList(ListName: listaDeCompras.getListName() , ItemName: pacoteDeArroz.getItemName()).getItemName()
         XCTAssertEqual(pacoteDeArroz.getItemName(), nomeItemRetornado)
      }
-*/
+
        
     
     

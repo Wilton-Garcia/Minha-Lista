@@ -52,9 +52,8 @@ class VirtualDataBase: NSObject {
     }
     
     public func getItemInList(ListName: String, ItemName: String) -> Item{
-        guard let itemInList =  List.first(where: {$0.getListName() == ListName})?.getItem(ItemName: ItemName) else {
-            return Item(ItemName: "0")
-        }
+        guard  let  itemInList = List.first(where: {$0.getListName() == ListName})?.getItem(ItemName: ItemName) else {
+            return Item(ItemName: "0")}
         return itemInList
     }
     
