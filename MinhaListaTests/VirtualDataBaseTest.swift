@@ -49,7 +49,7 @@ class VirtualDataBaseTest: XCTestCase {
            let biscoitoRecheado = Item(ItemName: "Biscoito Recheado")
            vdb.insertItemInList(ListName: listaDeCompras.getListName(), item: biscoitoRecheado)
            let itensInList = vdb.getItemListByName(ListName: listaDeCompras.getListName()).getList().count
-        XCTAssertEqual(1, itensInList)
+           XCTAssertEqual(1, itensInList)
     }
     
     func testShouldRetunrItensInListCount(){
@@ -59,10 +59,8 @@ class VirtualDataBaseTest: XCTestCase {
         vdb.insertItemList(ItemList: listaDeCompras)
         vdb.insertItemInList(ListName: listaDeCompras.getListName(), item: pacoteDeArroz)
         XCTAssertEqual(1,vdb.getItemsInListCount(ListName: listaDeCompras.getListName()) )
-      
     }
 
-    
     func testShouldReturnItem(){
         let vdb = VirtualDataBase()
         let listaDeCompras = ItemList(ListName: "Lista de Compras")
@@ -73,9 +71,6 @@ class VirtualDataBaseTest: XCTestCase {
         XCTAssertEqual(pacoteDeArroz.getItemName(), nomeItemRetornado)
      }
 
-       
-    
-    
     func testShouldCheckAndUncheckAnItem(){
         let vdb = VirtualDataBase()
         let listaDeCompras = ItemList(ListName: "Lista de Compras")
@@ -83,8 +78,8 @@ class VirtualDataBaseTest: XCTestCase {
         vdb.insertItemList(ItemList: listaDeCompras)
         vdb.insertItemInList(ListName: listaDeCompras.getListName(), item: pacoteDeArroz)
         vdb.checkItemInList(ListName: listaDeCompras.getListName(), ItemName: pacoteDeArroz.getItemName())
-     //   vdb.getItemListByName(ListName: listaDeCompras).getList().
+        XCTAssertTrue(vdb.getItemListByName(ListName: listaDeCompras.getListName()).getItem(ItemName: pacoteDeArroz.getItemName()).getItemCheck())
+        vdb.checkItemInList(ListName: listaDeCompras.getListName(), ItemName: pacoteDeArroz.getItemName())
+        XCTAssertFalse(vdb.getItemListByName(ListName: listaDeCompras.getListName()).getItem(ItemName: pacoteDeArroz.getItemName()).getItemCheck())
     }
-    
-    
 }

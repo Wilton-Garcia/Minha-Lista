@@ -64,7 +64,7 @@ class VirtualDataBase: NSObject {
     }
     
     public func checkItemInList(ListName: String, ItemName: String){
-        
+        List.first(where: {$0.getListName() == ListName})?.getItem(ItemName: ItemName).checkUncheckItem()
     }
     
 }
