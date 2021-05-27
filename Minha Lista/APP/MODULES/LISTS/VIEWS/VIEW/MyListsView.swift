@@ -34,7 +34,7 @@ class MyListsView : UIView{
             self.addSubview(labelListName)
             
             NSLayoutConstraint.activate([
-                labelListName.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 25),
+                labelListName.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 120),
                 labelListName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
                 labelListName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 10)
             ])
@@ -46,7 +46,7 @@ class MyListsView : UIView{
         tableViewMyLists.register(ListCellView.self, forCellReuseIdentifier: "listCell")
         
         NSLayoutConstraint.activate([
-            tableViewMyLists.topAnchor.constraint(equalTo: topAnchor, constant: 100),
+            tableViewMyLists.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 80),
             tableViewMyLists.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             tableViewMyLists.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             tableViewMyLists.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
@@ -54,7 +54,6 @@ class MyListsView : UIView{
         
     }
     
-
     
     @objc public func hello(){
         
@@ -66,8 +65,6 @@ class MyListsView : UIView{
        // setupLogoText()
         setupMyListTableView()
     }
-    
-
     
     
     //MARK: - Init
