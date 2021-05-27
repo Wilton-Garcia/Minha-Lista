@@ -11,7 +11,7 @@ class AddListaPopupView: UIView{
     
     private let contentView: UIView = {
        let view = UIView()
-        view.backgroundColor = .orange
+        view.backgroundColor = .white
         view.layer.cornerRadius = 10
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -19,13 +19,28 @@ class AddListaPopupView: UIView{
     
     private let labelListName: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.text = "Digite um nome para lista"
-        label.textColor = .cyan
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
+    private let textFieldListName: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Lista de ..."
+        textField.backgroundColor = .orange
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
+    }()
+
+    private let buttonCreateList: UIButton = {
+        let button = UIButton()
+        button.setTitle("Cadastrar", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .orange
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
     private func setupContentView(){
         self.addSubview(contentView)
         NSLayoutConstraint.activate([
@@ -39,15 +54,37 @@ class AddListaPopupView: UIView{
     private func setupLabelListName(){
         contentView.addSubview(labelListName)
         NSLayoutConstraint.activate([
-            labelListName.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            labelListName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            labelListName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10)
+            labelListName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            labelListName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            labelListName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10)
+        ])
+    }
+    
+    private func setupTextFieldListName(){
+        contentView.addSubview(textFieldListName)
+        NSLayoutConstraint.activate([
+            textFieldListName.heightAnchor.constraint(equalToConstant: 30),
+            textFieldListName.topAnchor.constraint(equalTo: labelListName.bottomAnchor, constant: 15),
+            textFieldListName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            textFieldListName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10)
+        ])
+    }
+    
+    private func setupButtonCreateList(){
+        contentView.addSubview(buttonCreateList)
+        NSLayoutConstraint.activate([
+            buttonCreateList.heightAnchor.constraint(equalToConstant: 40),
+            buttonCreateList.topAnchor.constraint(equalTo: textFieldListName.bottomAnchor, constant: 15),
+            buttonCreateList.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            buttonCreateList.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10)
         ])
     }
     
     private func setupLayout(){
         setupContentView()
         setupLabelListName()
+        setupTextFieldListName()
+        setupButtonCreateList()
         self.backgroundColor = .green
     }
     
