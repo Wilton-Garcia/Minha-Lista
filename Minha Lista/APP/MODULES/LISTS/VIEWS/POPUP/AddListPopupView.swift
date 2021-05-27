@@ -11,7 +11,8 @@ class AddListaPopupView: UIView{
     
     private let contentView: UIView = {
        let view = UIView()
-        view.backgroundColor = .clear
+        view.backgroundColor = .orange
+        view.layer.cornerRadius = 10
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -19,6 +20,8 @@ class AddListaPopupView: UIView{
     private let labelListName: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        label.text = "Digite um nome para lista"
+        label.textColor = .cyan
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -26,10 +29,10 @@ class AddListaPopupView: UIView{
     private func setupContentView(){
         self.addSubview(contentView)
         NSLayoutConstraint.activate([
-            contentView.topAnchor.constraint(equalTo: topAnchor, constant: -100),
-            contentView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -100),
-            contentView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 100),
-            contentView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100),
+            contentView.topAnchor.constraint(equalTo: topAnchor, constant: 300),
+            contentView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50),
+            contentView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 50),
+            contentView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -300),
         ])
     }
     
@@ -45,14 +48,12 @@ class AddListaPopupView: UIView{
     private func setupLayout(){
         setupContentView()
         setupLabelListName()
+        self.backgroundColor = .green
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    convenience init() {
+        self.init(frame:.zero)
+        setupLayout()
     }
 }
  

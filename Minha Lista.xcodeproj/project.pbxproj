@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D4B6FD2265EFB8B00574F81 /* AddListPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B6FD1265EFB8B00574F81 /* AddListPopupView.swift */; };
+		4D4B6FD7265F0E2C00574F81 /* AddListPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B6FD6265F0E2C00574F81 /* AddListPopupViewController.swift */; };
 		4D767CCA265AD7B6000661FC /* ListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D767CC9265AD7B6000661FC /* ListInteractorTest.swift */; };
 		4D767CD2265AD7D8000661FC /* VirtualDataBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D767CD1265AD7D8000661FC /* VirtualDataBaseTest.swift */; };
 		4D832BE82654414900752AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832BE72654414900752AF8 /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		4D4B6FD1265EFB8B00574F81 /* AddListPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListPopupView.swift; sourceTree = "<group>"; };
+		4D4B6FD6265F0E2C00574F81 /* AddListPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListPopupViewController.swift; sourceTree = "<group>"; };
 		4D767CC7265AD7B6000661FC /* MinhaListaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinhaListaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D767CC9265AD7B6000661FC /* ListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorTest.swift; sourceTree = "<group>"; };
 		4D767CCB265AD7B6000661FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				4D4B6FD1265EFB8B00574F81 /* AddListPopupView.swift */,
+				4D4B6FD6265F0E2C00574F81 /* AddListPopupViewController.swift */,
 			);
 			path = POPUP;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			files = (
 				4D832C0226544D8400752AF8 /* MyListsView.swift in Sources */,
 				4D832BEC2654414900752AF8 /* ViewController.swift in Sources */,
+				4D4B6FD7265F0E2C00574F81 /* AddListPopupViewController.swift in Sources */,
 				4D832C0026544D4F00752AF8 /* MyListsViewController.swift in Sources */,
 				4D832C07265456EC00752AF8 /* ItemList.swift in Sources */,
 				4D4B6FD2265EFB8B00574F81 /* AddListPopupView.swift in Sources */,
