@@ -14,45 +14,31 @@ class MyListsViewController : UIViewController{
     
     private let navigationBar: UINavigationBar = {
         let navigationBar: UINavigationBar = UINavigationBar(frame: .zero)
+        navigationBar.barTintColor = .orange
+        navigationBar.translatesAutoresizingMaskIntoConstraints = false
         return navigationBar
-    }()
-    
-    private let barButtonItemAddList: UIBarButtonItem = {
-        let barButtonItem = UIBarButtonItem()
-        
-        return barButtonItem
     }()
     
     private func setupNavigationBar(){
         targetView.addSubview(navigationBar)
         
-        navigationBar.translatesAutoresizingMaskIntoConstraints = false
-        navigationBar.topAnchor.constraint(equalTo: targetView.safeAreaLayoutGuide.topAnchor).isActive = true
-        navigationBar.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        navigationBar.leadingAnchor.constraint(equalTo: targetView.leadingAnchor).isActive = true
-        navigationBar.trailingAnchor.constraint(equalTo: targetView.trailingAnchor).isActive = true
-
-        navigationBar.barTintColor = .orange
-      
-        let navigationItem = UINavigationItem(title: "Minhas Listas")
-        let doneBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(hello))
- 
+        NSLayoutConstraint.activate([
+            navigationBar.topAnchor.constraint(equalTo: targetView.safeAreaLayoutGuide.topAnchor),
+            navigationBar.heightAnchor.constraint(equalToConstant: 45),
+            navigationBar.leadingAnchor.constraint(equalTo: targetView.leadingAnchor),
+            navigationBar.trailingAnchor.constraint(equalTo: targetView.trailingAnchor)
+        ])
         
-        navigationItem.rightBarButtonItem = doneBtn
+        let navigationItem = UINavigationItem(title: "Minhas Listas")
+        navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(hello))
         navigationBar.setItems([navigationItem], animated: false)
     }
     
     override  func viewWillLayoutSubviews(){
-        
-     
         setupNavigationBar()
-     
-       
     }
     
     @objc func hello(){
-        
-        print("Clicou")
         let navigation = UINavigationController(rootViewController: addListopupViewController)
         present(navigation, animated: true)
     }
@@ -62,5 +48,4 @@ class MyListsViewController : UIViewController{
         self.view = targetView
         targetView.data = ListInteractor().getAllLists()
     }
-    
 }
