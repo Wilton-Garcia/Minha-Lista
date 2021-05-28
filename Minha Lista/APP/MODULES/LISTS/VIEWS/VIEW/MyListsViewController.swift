@@ -10,13 +10,18 @@ import UIKit
 class MyListsViewController : UIViewController{
     
     private let targetView =  MyListsView()
-      
+    private let addListopupViewController = AddListPopupViewController()
     
     private let navigationBar: UINavigationBar = {
         let navigationBar: UINavigationBar = UINavigationBar(frame: .zero)
         return navigationBar
     }()
     
+    private let barButtonItemAddList: UIBarButtonItem = {
+        let barButtonItem = UIBarButtonItem()
+        
+        return barButtonItem
+    }()
     
     private func setupNavigationBar(){
         targetView.addSubview(navigationBar)
@@ -26,15 +31,15 @@ class MyListsViewController : UIViewController{
         navigationBar.heightAnchor.constraint(equalToConstant: 44).isActive = true
         navigationBar.leadingAnchor.constraint(equalTo: targetView.leadingAnchor).isActive = true
         navigationBar.trailingAnchor.constraint(equalTo: targetView.trailingAnchor).isActive = true
-        
+
         navigationBar.barTintColor = .orange
       
         let navigationItem = UINavigationItem(title: "Minhas Listas")
-        let doneBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: nil, action: #selector(hello))
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(hello))
+ 
         
-        
-             navigationItem.rightBarButtonItem = doneBtn
-             navigationBar.setItems([navigationItem], animated: false)
+        navigationItem.rightBarButtonItem = doneBtn
+        navigationBar.setItems([navigationItem], animated: false)
     }
     
     override  func viewWillLayoutSubviews(){
@@ -47,6 +52,9 @@ class MyListsViewController : UIViewController{
     
     @objc func hello(){
         
+        print("Clicou")
+        let navigation = UINavigationController(rootViewController: addListopupViewController)
+        present(navigation, animated: true)
     }
 
     override func viewDidLoad() {

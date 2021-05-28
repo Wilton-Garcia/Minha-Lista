@@ -36,7 +36,6 @@ class AddListaPopupView: UIView{
         let button = UIButton()
         button.setTitle("Cadastrar", for: .normal)
         button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .orange
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -73,7 +72,7 @@ class AddListaPopupView: UIView{
     private func setupButtonCreateList(){
         contentView.addSubview(buttonCreateList)
         NSLayoutConstraint.activate([
-            buttonCreateList.heightAnchor.constraint(equalToConstant: 40),
+            buttonCreateList.heightAnchor.constraint(equalToConstant: 20),
             buttonCreateList.topAnchor.constraint(equalTo: textFieldListName.bottomAnchor, constant: 15),
             buttonCreateList.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             buttonCreateList.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10)
