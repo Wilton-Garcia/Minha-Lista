@@ -30,7 +30,7 @@ class MyListsViewController : UIViewController{
         ])
         
         let navigationItem = UINavigationItem(title: "Minhas Listas")
-        navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(hello))
+        navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(callPopupAddList))
         navigationBar.setItems([navigationItem], animated: false)
     }
     
@@ -38,8 +38,9 @@ class MyListsViewController : UIViewController{
         setupNavigationBar()
     }
     
-    @objc func hello(){
+    @objc func callPopupAddList(){
         let navigation = UINavigationController(rootViewController: addListopupViewController)
+        navigation.navigationBar.isHidden = true
         present(navigation, animated: true)
     }
 

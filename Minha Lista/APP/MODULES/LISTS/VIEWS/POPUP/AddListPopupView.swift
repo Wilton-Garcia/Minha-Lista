@@ -84,7 +84,7 @@ class AddListaPopupView: UIView{
         setupLabelListName()
         setupTextFieldListName()
         setupButtonCreateList()
-        self.backgroundColor = .green
+        self.backgroundColor = .clear
     }
     
     convenience init() {
