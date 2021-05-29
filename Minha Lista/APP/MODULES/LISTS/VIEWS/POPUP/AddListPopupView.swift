@@ -9,6 +9,8 @@ import UIKit
 
 class AddListaPopupView: UIView{
     
+    private var clique = 0;
+    
     private let contentView: UIView = {
        let view = UIView()
         view.backgroundColor = .white
@@ -36,6 +38,15 @@ class AddListaPopupView: UIView{
         let button = UIButton()
         button.setTitle("Cadastrar", for: .normal)
         button.setTitleColor(.black, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private let buttonDimiss: UIButton = {
+        let button = UIButton()
+        button.setTitle("Cancelar", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        //button.addTarget(self, action: #selector(dimissView), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -79,14 +90,31 @@ class AddListaPopupView: UIView{
         ])
     }
     
+    private func setupButtonDimiss(){
+        contentView.addSubview(buttonDimiss)
+        NSLayoutConstraint.activate([
+            buttonDimiss.heightAnchor.constraint(equalToConstant: 20),
+            buttonDimiss.topAnchor.constraint(equalTo: buttonCreateList.bottomAnchor, constant: 20),
+            buttonDimiss.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
+            buttonDimiss.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30)
+        ])
+    }
+    
     private func setupLayout(){
         setupContentView()
         setupLabelListName()
         setupTextFieldListName()
         setupButtonCreateList()
+        setupButtonDimiss()
         self.backgroundColor = .clear
     }
     
+    @objc public func closeView(){
+        
+        print("Clicou :) \(clique)")
+        clique = clique + 1
+        
+    }
     convenience init() {
         self.init(frame:.zero)
         setupLayout()

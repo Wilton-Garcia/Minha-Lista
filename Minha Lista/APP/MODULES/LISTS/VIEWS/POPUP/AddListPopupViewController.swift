@@ -12,6 +12,10 @@ class AddListPopupViewController: UIViewController {
     
     private let targerView = AddListaPopupView()
     
+    public func dimissView(){
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = targerView

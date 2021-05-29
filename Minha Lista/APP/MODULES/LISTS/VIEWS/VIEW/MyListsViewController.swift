@@ -43,6 +43,11 @@ class MyListsViewController : UIViewController{
         navigation.navigationBar.isHidden = true
         present(navigation, animated: true)
     }
+    @objc func closePopupAddList(){
+        let navigation = UINavigationController(rootViewController: addListopupViewController)
+        navigation.navigationBar.isHidden = true
+        dismiss(animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
