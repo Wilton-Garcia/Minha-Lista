@@ -16,7 +16,7 @@ class MyListsViewController : UIViewController{
         super.viewDidLoad()
         self.view = targetView
         delegate = self
-        targetView.data = ListInteractor().getAllLists()
+        //targetView.data = ListInteractor().getLists()
     }
     
     //MARK: - Fim refatoração viper

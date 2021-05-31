@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import UIKit
 
-protocol PresenterToRouterProtocol {
-    
+protocol PresenterToRouterProtocol: AnyObject {
+    func showListItemsViewController(navigationController: UINavigationController)
 }

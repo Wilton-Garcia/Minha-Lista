@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol PresenterToInteractorProtocol {
-    
+protocol PresenterToInteractorProtocol: AnyObject {
+    func getLists()
 }
