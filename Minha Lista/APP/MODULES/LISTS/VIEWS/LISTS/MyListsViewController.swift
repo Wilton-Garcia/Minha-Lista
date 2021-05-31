@@ -8,6 +8,18 @@
 import UIKit
 
 class MyListsViewController : UIViewController{
+    //MARK: - Início refatoração para viper
+    var presenter: ListPresenter?
+    weak var delegate: ListViewDeletegate?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view = targetView
+        delegate = self
+        targetView.data = ListInteractor().getAllLists()
+    }
+    
+    //MARK: - Fim refatoração viper
     
     private let targetView =  MyListsView()
     private let addListopupViewController = AddListPopupViewController()
@@ -39,19 +51,23 @@ class MyListsViewController : UIViewController{
     }
     
     @objc func callPopupAddList(){
+        print("Chamou o método")
+        delegate?.openPopup()
+    }
+}
+
+extension MyListsViewController: ListViewDeletegate{
+    
+    func openPopup() {
+        print("Entrou no delegate")
         let navigation = UINavigationController(rootViewController: addListopupViewController)
         navigation.navigationBar.isHidden = true
         present(navigation, animated: true)
     }
-    @objc func closePopupAddList(){
+    
+    func closePopup() {
         let navigation = UINavigationController(rootViewController: addListopupViewController)
         navigation.navigationBar.isHidden = true
         dismiss(animated: true, completion: nil)
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view = targetView
-        targetView.data = ListInteractor().getAllLists()
     }
 }

@@ -9,7 +9,14 @@ import UIKit
 
 class AddListaPopupView: UIView{
     
+    
+    //MARK: - Private properties
+    
+    private weak var delegate: ListViewDeletegate?
+    
     private var clique = 0;
+    
+    //MARK: - View Properties
     
     private let contentView: UIView = {
        let view = UIView()
@@ -50,6 +57,8 @@ class AddListaPopupView: UIView{
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    
+    //MARK: - View Methods
 
     private func setupContentView(){
         self.addSubview(contentView)
@@ -109,15 +118,16 @@ class AddListaPopupView: UIView{
         self.backgroundColor = .clear
     }
     
-    @objc public func closeView(){
-        
-        print("Clicou :) \(clique)")
-        clique = clique + 1
-        
-    }
+    //MARK: - Init
+    
     convenience init() {
         self.init(frame:.zero)
         setupLayout()
     }
+    
+    //MARK: - View Methods
+    
+    @objc public func closeView(){
+        delegate?.closePopup()
+    }
 }
- 

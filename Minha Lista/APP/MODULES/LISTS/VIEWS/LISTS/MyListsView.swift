@@ -10,15 +10,9 @@ import UIKit
 class MyListsView : UIView{
     
     //MARK: - Private properties
+    
     private let Interactor = ListInteractor()
     public var data = [ItemList]()
-    
-    private let labelListName: UILabel = {
-        let labelListName = UILabel()
-        labelListName.text = "Minhas listas"
-        labelListName.translatesAutoresizingMaskIntoConstraints = false
-        return labelListName
-    }()
     
     private let tableViewMyLists: UITableView = {
         let myLists = UITableView()
@@ -28,17 +22,7 @@ class MyListsView : UIView{
         return myLists
     }()
     
-    
     //MARK: - Private methods
-    private func setupLogoText() {
-            self.addSubview(labelListName)
-            
-            NSLayoutConstraint.activate([
-                labelListName.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 120),
-                labelListName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-                labelListName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 10)
-            ])
-        }
     
     private func setupMyListTableView(){
         self.addSubview(tableViewMyLists)
@@ -51,32 +35,26 @@ class MyListsView : UIView{
             tableViewMyLists.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             tableViewMyLists.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
-        
     }
-    
-    
-    @objc public func hello(){
-        
-    }
-    
     
     private func setupLayout(){
         backgroundColor = .white
-       // setupLogoText()
         setupMyListTableView()
     }
-    
+     
     
     //MARK: - Init
+    
         convenience init() {
             self.init(frame:.zero)
             tableViewMyLists.delegate = self
             tableViewMyLists.dataSource = self
             setupLayout()
         }
-}
+    }
 
     //MARK: - Extensions
+
 extension  MyListsView : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Interactor.getListsCount()
@@ -94,9 +72,8 @@ extension  MyListsView : UITableViewDataSource{
         tableViewMyLists.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableViewMyLists.backgroundColor = .none
     }
-    
-    
 }
+
 extension MyListsView: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100

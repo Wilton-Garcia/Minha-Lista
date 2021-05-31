@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4D4B6FD2265EFB8B00574F81 /* AddListPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B6FD1265EFB8B00574F81 /* AddListPopupView.swift */; };
 		4D4B6FD7265F0E2C00574F81 /* AddListPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B6FD6265F0E2C00574F81 /* AddListPopupViewController.swift */; };
+		4D6BA9A126641B4100F65B50 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BA9A026641B4100F65B50 /* ListPresenter.swift */; };
+		4D6BA9A32665201900F65B50 /* ListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BA9A22665201900F65B50 /* ListViewDelegate.swift */; };
+		4D6BA9A9266555AE00F65B50 /* ViewToPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BA9A8266555AE00F65B50 /* ViewToPresenterProtocol.swift */; };
+		4D6BA9AB266555ED00F65B50 /* PresenterToViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BA9AA266555ED00F65B50 /* PresenterToViewProtocol.swift */; };
 		4D767CCA265AD7B6000661FC /* ListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D767CC9265AD7B6000661FC /* ListInteractorTest.swift */; };
 		4D767CD2265AD7D8000661FC /* VirtualDataBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D767CD1265AD7D8000661FC /* VirtualDataBaseTest.swift */; };
 		4D832BE82654414900752AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832BE72654414900752AF8 /* AppDelegate.swift */; };
@@ -39,6 +43,10 @@
 /* Begin PBXFileReference section */
 		4D4B6FD1265EFB8B00574F81 /* AddListPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListPopupView.swift; sourceTree = "<group>"; };
 		4D4B6FD6265F0E2C00574F81 /* AddListPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListPopupViewController.swift; sourceTree = "<group>"; };
+		4D6BA9A026641B4100F65B50 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		4D6BA9A22665201900F65B50 /* ListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDelegate.swift; sourceTree = "<group>"; };
+		4D6BA9A8266555AE00F65B50 /* ViewToPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewToPresenterProtocol.swift; sourceTree = "<group>"; };
+		4D6BA9AA266555ED00F65B50 /* PresenterToViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterToViewProtocol.swift; sourceTree = "<group>"; };
 		4D767CC7265AD7B6000661FC /* MinhaListaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinhaListaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D767CC9265AD7B6000661FC /* ListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorTest.swift; sourceTree = "<group>"; };
 		4D767CCB265AD7B6000661FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,30 +86,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D4B6FD3265F0AB400574F81 /* VIEW */ = {
-			isa = PBXGroup;
-			children = (
-				4D832BFF26544D4F00752AF8 /* MyListsViewController.swift */,
-				4D832C0126544D8400752AF8 /* MyListsView.swift */,
-			);
-			path = VIEW;
-			sourceTree = "<group>";
-		};
-		4D4B6FD4265F0AF500574F81 /* CELLS */ = {
-			isa = PBXGroup;
-			children = (
-				4D832C082655F0E300752AF8 /* ListCellView.swift */,
-			);
-			path = CELLS;
-			sourceTree = "<group>";
-		};
-		4D4B6FD5265F0B0200574F81 /* POPUP */ = {
+		4D6BA9A42665294500F65B50 /* POPUP */ = {
 			isa = PBXGroup;
 			children = (
 				4D4B6FD1265EFB8B00574F81 /* AddListPopupView.swift */,
 				4D4B6FD6265F0E2C00574F81 /* AddListPopupViewController.swift */,
 			);
 			path = POPUP;
+			sourceTree = "<group>";
+		};
+		4D6BA9A52665295A00F65B50 /* LISTS */ = {
+			isa = PBXGroup;
+			children = (
+				4D832BFF26544D4F00752AF8 /* MyListsViewController.swift */,
+				4D832C0126544D8400752AF8 /* MyListsView.swift */,
+			);
+			path = LISTS;
+			sourceTree = "<group>";
+		};
+		4D6BA9A62665296A00F65B50 /* CELL */ = {
+			isa = PBXGroup;
+			children = (
+				4D832C082655F0E300752AF8 /* ListCellView.swift */,
+			);
+			path = CELL;
+			sourceTree = "<group>";
+		};
+		4D6BA9A72665297300F65B50 /* PROTOCOLS */ = {
+			isa = PBXGroup;
+			children = (
+				4D6BA9A22665201900F65B50 /* ListViewDelegate.swift */,
+				4D6BA9A8266555AE00F65B50 /* ViewToPresenterProtocol.swift */,
+				4D6BA9AA266555ED00F65B50 /* PresenterToViewProtocol.swift */,
+			);
+			path = PROTOCOLS;
 			sourceTree = "<group>";
 		};
 		4D767CC8265AD7B6000661FC /* MinhaListaTests */ = {
@@ -200,6 +218,7 @@
 		4DC4E9752662E1980029321F /* PRESENTER */ = {
 			isa = PBXGroup;
 			children = (
+				4D6BA9A026641B4100F65B50 /* ListPresenter.swift */,
 			);
 			path = PRESENTER;
 			sourceTree = "<group>";
@@ -226,9 +245,10 @@
 		4DD52D1A2658543E0034CDA4 /* VIEWS */ = {
 			isa = PBXGroup;
 			children = (
-				4D4B6FD5265F0B0200574F81 /* POPUP */,
-				4D4B6FD4265F0AF500574F81 /* CELLS */,
-				4D4B6FD3265F0AB400574F81 /* VIEW */,
+				4D6BA9A72665297300F65B50 /* PROTOCOLS */,
+				4D6BA9A62665296A00F65B50 /* CELL */,
+				4D6BA9A52665295A00F65B50 /* LISTS */,
+				4D6BA9A42665294500F65B50 /* POPUP */,
 			);
 			path = VIEWS;
 			sourceTree = "<group>";
@@ -365,8 +385,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6BA9A9266555AE00F65B50 /* ViewToPresenterProtocol.swift in Sources */,
+				4D6BA9A126641B4100F65B50 /* ListPresenter.swift in Sources */,
 				4D832C0226544D8400752AF8 /* MyListsView.swift in Sources */,
 				4D832BEC2654414900752AF8 /* ViewController.swift in Sources */,
+				4D6BA9AB266555ED00F65B50 /* PresenterToViewProtocol.swift in Sources */,
+				4D6BA9A32665201900F65B50 /* ListViewDelegate.swift in Sources */,
 				4D4B6FD7265F0E2C00574F81 /* AddListPopupViewController.swift in Sources */,
 				4D832C0026544D4F00752AF8 /* MyListsViewController.swift in Sources */,
 				4D832C07265456EC00752AF8 /* ItemList.swift in Sources */,
