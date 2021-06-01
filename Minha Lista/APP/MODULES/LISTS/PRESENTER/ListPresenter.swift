@@ -8,26 +8,26 @@
 import Foundation
 import UIKit
 
-class ListPresenter {
+class ListPresenter: ViewToPresenterProtocol {
+ 
+    
     weak var view: PresenterToViewProtocol?
     
     weak var interactor: PresenterToInteractorProtocol?
     
     weak var router: PresenterToRouterProtocol?
     
-    func loadList(listName: String){
+    func startGetLists() {
         interactor?.getLists()
     }
-    
+   
     func showListItemsViewController(navigationController: UINavigationController) {
-        router?.showListItemsViewController(navigationController: navigationController)
+        router?.showPopupCreateList(navigationController: navigationController)
     }
 }
 
-extension ListPresenter: InteractorToPresenterProtcol{
+extension ListPresenter: InteractorToPresenterProtocol{
     func listLoadedWitchSucess(itemList: [ItemList]) {
-        view?.showList(itemList: itemList)
+        view?.getLists(itemList: itemList)
     }
-    
-    
 }

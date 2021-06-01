@@ -55,9 +55,16 @@ class MyListsView : UIView{
 
     //MARK: - Extensions
 
+extension MyListsView: PresenterToViewProtocol{
+    func getLists(itemList: [ItemList]) {
+   //     self.data = itemList
+   //     self.tableViewMyLists.reloadData()
+    }
+}
+
 extension  MyListsView : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        Interactor.getListsCount()
+        self.data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol  PresenterToViewProtocol: AnyObject {
-    func showList(itemList: [ItemList])
+    func getLists(itemList: [ItemList])
 }

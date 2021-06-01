@@ -124,8 +124,8 @@
 				4D6BA9A22665201900F65B50 /* ListViewDelegate.swift */,
 				4D6BA9A8266555AE00F65B50 /* ViewToPresenterProtocol.swift */,
 				4D6BA9AA266555ED00F65B50 /* PresenterToViewProtocol.swift */,
-				4D6BA9AC2665565B00F65B50 /* PresenterToInteractorProtocol.swift */,
 				4D6BA9AE266556AC00F65B50 /* PresenterToRouterProtocol.swift */,
+				4D6BA9AC2665565B00F65B50 /* PresenterToInteractorProtocol.swift */,
 				4D6BA9B0266557A600F65B50 /* InteractorToPresenterProtocol.swift */,
 			);
 			path = PROTOCOLS;

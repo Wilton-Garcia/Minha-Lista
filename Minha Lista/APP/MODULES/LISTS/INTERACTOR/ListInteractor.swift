@@ -9,7 +9,7 @@ import Foundation
 
 class ListInteractor: NSObject, PresenterToInteractorProtocol {
     
-    weak var presenter: InteractorToPresenterProtcol?
+    weak var presenter: InteractorToPresenterProtocol?
     
     
     private let db = VirtualDataBase()
@@ -39,7 +39,7 @@ class ListInteractor: NSObject, PresenterToInteractorProtocol {
     }
     
     public func getLists(){
-        let lists =  db.getAllItemList()
+        let lists = db.getAllItemList()
         self.presenter?.listLoadedWitchSucess(itemList: lists)
     }
     

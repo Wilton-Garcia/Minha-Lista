@@ -8,5 +8,8 @@
 import Foundation
 
 protocol PresenterToInteractorProtocol: AnyObject {
+    
+    var presenter: InteractorToPresenterProtocol? {get set}
+    
     func getLists()
 }

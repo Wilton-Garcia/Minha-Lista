@@ -9,5 +9,8 @@ import Foundation
 import UIKit
 
 protocol PresenterToRouterProtocol: AnyObject {
-    func showListItemsViewController(navigationController: UINavigationController)
+    
+    static func createMyListViewController() -> MyListsViewController
+    
+    func showPopupCreateList(navigationController: UINavigationController)
 }

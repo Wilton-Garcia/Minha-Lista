@@ -9,14 +9,15 @@ import UIKit
 
 class MyListsViewController : UIViewController{
     //MARK: - Início refatoração para viper
-    var presenter: ListPresenter?
+    var presenter: ViewToPresenterProtocol?
+    
     weak var delegate: ListViewDeletegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = targetView
+        presenter?.startGetLists()
         delegate = self
-        //targetView.data = ListInteractor().getLists()
     }
     
     //MARK: - Fim refatoração viper
@@ -56,6 +57,13 @@ class MyListsViewController : UIViewController{
     }
 }
 
+extension MyListsViewController:PresenterToViewProtocol{
+    func getLists(itemList: [ItemList]) {
+        targetView.data = itemList
+    }
+}
+
+
 extension MyListsViewController: ListViewDeletegate{
     
     func openPopup() {
@@ -71,3 +79,4 @@ extension MyListsViewController: ListViewDeletegate{
         dismiss(animated: true, completion: nil)
     }
 }
+
