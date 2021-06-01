@@ -65,6 +65,10 @@ extension MyListsViewController:PresenterToViewProtocol{
 
 
 extension MyListsViewController: ListViewDeletegate{
+    func openList() {
+        //implement function to load list
+    }
+    
     
     func openPopup() {
         print("Entrou no delegate")

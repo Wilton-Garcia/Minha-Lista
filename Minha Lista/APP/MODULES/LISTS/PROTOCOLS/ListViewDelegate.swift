@@ -10,4 +10,5 @@ import Foundation
 protocol ListViewDeletegate: AnyObject {
     func openPopup()
     func closePopup()
+    func openList()
 }

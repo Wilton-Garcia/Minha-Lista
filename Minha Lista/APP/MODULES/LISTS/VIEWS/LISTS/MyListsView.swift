@@ -11,8 +11,8 @@ class MyListsView : UIView{
     
     //MARK: - Private properties
     
-    private let Interactor = ListInteractor()
     public var data = [ItemList]()
+    weak var delegate: ListViewDeletegate?
     
     private let tableViewMyLists: UITableView = {
         let myLists = UITableView()
@@ -42,10 +42,9 @@ class MyListsView : UIView{
         setupMyListTableView()
     }
      
-    
     //MARK: - Init
     
-        convenience init() {
+    convenience init() {
             self.init(frame:.zero)
             tableViewMyLists.delegate = self
             tableViewMyLists.dataSource = self
@@ -54,13 +53,6 @@ class MyListsView : UIView{
     }
 
     //MARK: - Extensions
-
-extension MyListsView: PresenterToViewProtocol{
-    func getLists(itemList: [ItemList]) {
-   //     self.data = itemList
-   //     self.tableViewMyLists.reloadData()
-    }
-}
 
 extension  MyListsView : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,6 +67,10 @@ extension  MyListsView : UITableViewDataSource{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.openList()
+    }
+    
     private func addExtaLayoutConfigsToTableView(){
         tableViewMyLists.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableViewMyLists.backgroundColor = .none
@@ -85,4 +81,5 @@ extension MyListsView: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
+    
 }
