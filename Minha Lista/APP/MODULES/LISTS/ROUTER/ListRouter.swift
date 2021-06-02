@@ -6,7 +6,28 @@
 //
 
 import Foundation
+import UIKit
 
-class ListRouter {
-
+class ListRouter: PresenterToRouterProtocol {
+    static func createMyListViewController() -> MyListsViewController {
+        let view = createMyListViewController()
+        
+        var presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = ListPresenter()
+        let interactor: PresenterToInteractorProtocol = ListInteractor()
+        let router: PresenterToRouterProtocol = ListRouter()
+        
+        view.presenter = presenter
+        presenter.view = view
+        presenter.router = router
+        presenter.interactor = interactor
+        interactor.presenter = presenter
+        
+        return view
+    }
+    
+    func showPopupCreateList(navigationController: UINavigationController) {
+        //TODO
+    }
+    
+    
 }
