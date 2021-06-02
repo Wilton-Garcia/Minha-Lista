@@ -19,7 +19,6 @@
 		4D767CCA265AD7B6000661FC /* ListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D767CC9265AD7B6000661FC /* ListInteractorTest.swift */; };
 		4D767CD2265AD7D8000661FC /* VirtualDataBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D767CD1265AD7D8000661FC /* VirtualDataBaseTest.swift */; };
 		4D832BE82654414900752AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832BE72654414900752AF8 /* AppDelegate.swift */; };
-		4D832BEA2654414900752AF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832BE92654414900752AF8 /* SceneDelegate.swift */; };
 		4D832BEC2654414900752AF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832BEB2654414900752AF8 /* ViewController.swift */; };
 		4D832BF12654414C00752AF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D832BF02654414C00752AF8 /* Assets.xcassets */; };
 		4D832BF42654414C00752AF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D832BF22654414C00752AF8 /* LaunchScreen.storyboard */; };
@@ -59,7 +58,6 @@
 		4D767CD1265AD7D8000661FC /* VirtualDataBaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualDataBaseTest.swift; sourceTree = "<group>"; };
 		4D832BE42654414900752AF8 /* Minha Lista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Minha Lista.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D832BE72654414900752AF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D832BE92654414900752AF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4D832BEB2654414900752AF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D832BF02654414C00752AF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D832BF32654414C00752AF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				4DD52D2126585FDF0034CDA4 /* DATA */,
 				4D832BFB265444D200752AF8 /* APP */,
 				4D832BE72654414900752AF8 /* AppDelegate.swift */,
-				4D832BE92654414900752AF8 /* SceneDelegate.swift */,
 				4D832BEB2654414900752AF8 /* ViewController.swift */,
 				4D832BF02654414C00752AF8 /* Assets.xcassets */,
 				4D832BF22654414C00752AF8 /* LaunchScreen.storyboard */,
@@ -412,7 +409,6 @@
 				4D6BA9AF266556AC00F65B50 /* PresenterToRouterProtocol.swift in Sources */,
 				4D832C05265456D500752AF8 /* Item.swift in Sources */,
 				4DC4E974266195480029321F /* ListRouter.swift in Sources */,
-				4D832BEA2654414900752AF8 /* SceneDelegate.swift in Sources */,
 				4DD52D202658598A0034CDA4 /* ListInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
