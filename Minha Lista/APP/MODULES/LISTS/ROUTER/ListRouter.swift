@@ -10,7 +10,7 @@ import UIKit
 
 class ListRouter: PresenterToRouterProtocol {
     static func createMyListViewController() -> MyListsViewController {
-        let view = createMyListViewController()
+        let view = MyListsViewController()
         
         var presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = ListPresenter()
         let interactor: PresenterToInteractorProtocol = ListInteractor()
