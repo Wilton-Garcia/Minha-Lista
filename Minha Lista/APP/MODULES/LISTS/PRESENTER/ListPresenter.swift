@@ -11,11 +11,11 @@ import UIKit
 class ListPresenter: ViewToPresenterProtocol {
  
     
-    weak var view: PresenterToViewProtocol?
+    var view: PresenterToViewProtocol?
     
-    weak var interactor: PresenterToInteractorProtocol?
+    var interactor: PresenterToInteractorProtocol?
     
-    weak var router: PresenterToRouterProtocol?
+    var router: PresenterToRouterProtocol?
     
     func startGetLists() {
         interactor?.getLists()

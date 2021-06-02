@@ -12,21 +12,22 @@ class ListRouter: PresenterToRouterProtocol {
     static func createMyListViewController() -> MyListsViewController {
         let view = MyListsViewController()
         
-        var presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = ListPresenter()
+        let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = ListPresenter()
         let interactor: PresenterToInteractorProtocol = ListInteractor()
         let router: PresenterToRouterProtocol = ListRouter()
         
-        view.presenter = presenter
+        view.presentor = presenter
+        /* TODO: FIX this
         presenter.view = view
         presenter.router = router
         presenter.interactor = interactor
         interactor.presenter = presenter
-        
+        */
         return view
     }
     
     func showPopupCreateList(navigationController: UINavigationController) {
-        //TODO
+        //TODO: Implement function to show popList Here
     }
     
     

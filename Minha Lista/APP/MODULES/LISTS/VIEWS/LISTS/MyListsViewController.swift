@@ -9,15 +9,16 @@ import UIKit
 
 class MyListsViewController : UIViewController{
     //MARK: - Início refatoração para viper
-    var presenter: ViewToPresenterProtocol?
+    var presentor: ViewToPresenterProtocol?
     
-    weak var delegate: ListViewDeletegate?
+    var delegate: ListViewDeletegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view = targetView
-        presenter?.startGetLists()
+        print("Deve entrar")
+        presentor?.startGetLists()
         delegate = self
+        self.view = targetView
     }
     
     //MARK: - Fim refatoração viper
@@ -55,10 +56,13 @@ class MyListsViewController : UIViewController{
         print("Chamou o método")
         delegate?.openPopup()
     }
+    
+    var router: PresenterToRouterProtocol?
 }
 
 extension MyListsViewController:PresenterToViewProtocol{
     func getLists(itemList: [ItemList]) {
+        print("Entrou")
         targetView.data = itemList
     }
 }
@@ -66,15 +70,17 @@ extension MyListsViewController:PresenterToViewProtocol{
 
 extension MyListsViewController: ListViewDeletegate{
     func openList() {
-        //implement function to load list
+        //TODO: Implement function to load list
     }
     
+
     
     func openPopup() {
         print("Entrou no delegate")
         let navigation = UINavigationController(rootViewController: addListopupViewController)
         navigation.navigationBar.isHidden = true
         present(navigation, animated: true)
+        
     }
     
     func closePopup() {

@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol  PresenterToViewProtocol: AnyObject {
+protocol  PresenterToViewProtocol {
     func getLists(itemList: [ItemList])
 }

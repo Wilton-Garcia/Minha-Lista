@@ -7,9 +7,9 @@
 
 import Foundation
 
-class ListInteractor: NSObject, PresenterToInteractorProtocol {
+class ListInteractor: PresenterToInteractorProtocol {
     
-    weak var presenter: InteractorToPresenterProtocol?
+    var presenter: InteractorToPresenterProtocol?
     
     
     private let db = VirtualDataBase()
@@ -39,13 +39,9 @@ class ListInteractor: NSObject, PresenterToInteractorProtocol {
     }
     
     public func getLists(){
-        let lists = db.getAllItemList()
-        self.presenter?.listLoadedWitchSucess(itemList: lists)
-    }
-    
-    override init() {
-        super.init()
         self.createList(listName: "Supermercado")
         self.createList(listName: "Sacolão")
+        let lists = db.getAllItemList()
+        self.presenter?.listLoadedWitchSucess(itemList: lists)
     }
 }

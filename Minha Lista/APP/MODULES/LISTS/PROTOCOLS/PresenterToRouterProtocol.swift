@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol PresenterToRouterProtocol: AnyObject {
+protocol PresenterToRouterProtocol {
     
     static func createMyListViewController() -> MyListsViewController
     
