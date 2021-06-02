@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol InteractorToPresenterProtocol{
+protocol InteractorToPresenterProtocol: AnyObject{
     func listLoadedWitchSucess(itemList: [ItemList])
 }

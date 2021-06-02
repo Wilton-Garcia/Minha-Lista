@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol PresenterToInteractorProtocol {
+protocol PresenterToInteractorProtocol: AnyObject {
     
     var presenter: InteractorToPresenterProtocol? {get set}
     

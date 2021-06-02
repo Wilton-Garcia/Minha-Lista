@@ -17,12 +17,12 @@ class ListRouter: PresenterToRouterProtocol {
         let router: PresenterToRouterProtocol = ListRouter()
         
         view.presentor = presenter
-        /* TODO: FIX this
+ 
         presenter.view = view
         presenter.router = router
         presenter.interactor = interactor
         interactor.presenter = presenter
-        */
+ 
         return view
     }
     
