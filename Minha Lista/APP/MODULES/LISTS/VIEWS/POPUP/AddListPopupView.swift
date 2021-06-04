@@ -36,7 +36,6 @@ class AddListaPopupView: UIView{
     private let textFieldListName: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Lista de ..."
-        textField.backgroundColor = .orange
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
