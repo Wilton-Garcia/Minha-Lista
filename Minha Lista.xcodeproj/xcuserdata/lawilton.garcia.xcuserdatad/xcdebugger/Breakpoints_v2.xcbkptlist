@@ -14,8 +14,8 @@
             filePath = "Minha Lista/APP/MODULES/LISTS/INTERACTOR/ListInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "getLists()"
             landmarkType = "7">
          </BreakpointContent>
@@ -39,32 +39,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DD2E4557-AF88-4ABF-962F-53D11A8EC918"
-            shouldBeEnabled = "Yes"
+            uuid = "09CF6B5D-4217-4F53-8725-0893B909177A"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Minha Lista/APP/MODULES/LISTS/VIEWS/LISTS/MyListsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "MyListsViewController"
-            landmarkType = "21">
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ACC2E14C-52EE-4724-8869-B1A6A6A655C7"
+            uuid = "752D69B5-5DE9-4D2C-B47F-83DED334954C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Minha Lista/APP/MODULES/LISTS/VIEWS/LISTS/MyListsViewController.swift"
+            filePath = "Minha Lista/APP/MODULES/LISTS/VIEWS/LISTS/MyListsView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "scrollViewDidScroll(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

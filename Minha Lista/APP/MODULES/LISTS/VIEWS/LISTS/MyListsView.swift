@@ -46,9 +46,11 @@ class MyListsView : UIView{
     
     convenience init() {
             self.init(frame:.zero)
+            delegate?.loadData()
             tableViewMyLists.delegate = self
             tableViewMyLists.dataSource = self
             setupLayout()
+        
         }
     }
 
@@ -75,11 +77,20 @@ extension  MyListsView : UITableViewDataSource{
         tableViewMyLists.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableViewMyLists.backgroundColor = .none
     }
+    
+    
 }
 
 extension MyListsView: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
+    }
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        delegate?.loadData()
+        tableViewMyLists.reloadData()
+        
     }
     
 }
