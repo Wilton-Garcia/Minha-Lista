@@ -88,9 +88,7 @@ extension MyListsView: UITableViewDelegate{
     
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        delegate?.loadData()
         tableViewMyLists.reloadData()
-        
     }
     
 }

@@ -38,6 +38,10 @@ class ListInteractor: PresenterToInteractorProtocol {
         return db.getItemListCout()
     }
     
+    public func populateDB(){
+        
+    }
+    
     public func getLists(){
         self.createList(listName: "Supermercado")
         self.createList(listName: "Sacolão")

@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController.viewControllers = [itemList]
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = MyListsViewController()
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
         return true

@@ -12,7 +12,7 @@ class AddListaPopupView: UIView{
     
     //MARK: - Private properties
     
-    private weak var delegate: ListViewDeletegate?
+    public weak var delegate: ListViewDeletegate?
     
     private var clique = 0;
     
@@ -52,7 +52,7 @@ class AddListaPopupView: UIView{
         let button = UIButton()
         button.setTitle("Cancelar", for: .normal)
         button.setTitleColor(.black, for: .normal)
-        //button.addTarget(self, action: #selector(dimissView), for: .touchUpInside)
+        button.addTarget(self, action: #selector(close), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -106,6 +106,11 @@ class AddListaPopupView: UIView{
             buttonDimiss.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
             buttonDimiss.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30)
         ])
+    }
+    
+    @objc private func close(){
+        print("closing")
+        delegate?.closePopup()
     }
     
     private func setupLayout(){

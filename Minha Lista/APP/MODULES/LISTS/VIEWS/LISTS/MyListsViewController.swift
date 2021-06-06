@@ -17,11 +17,11 @@ class MyListsViewController : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Minhas Listas"
         targetView.delegate = self
         self.view = targetView
-       
+        AddListaPopupView().delegate = self
         presentor?.startGetLists()
+        targetView.data = data
     }
     
     //MARK: - Fim refatoração viper
@@ -84,7 +84,7 @@ extension MyListsViewController: ListViewDeletegate{
     }
     
     func openPopup() {
-        print("Entrou no delegate")
+        print("Entrou no delegate para mostrar o popoup")
         let navigation = UINavigationController(rootViewController: addListopupViewController)
         navigation.navigationBar.isHidden = true
         present(navigation, animated: true)
@@ -92,6 +92,7 @@ extension MyListsViewController: ListViewDeletegate{
     }
     
     func closePopup() {
+        print("Entrou no delegate para fechar o popoup")
         let navigation = UINavigationController(rootViewController: addListopupViewController)
         navigation.navigationBar.isHidden = true
         dismiss(animated: true, completion: nil)
