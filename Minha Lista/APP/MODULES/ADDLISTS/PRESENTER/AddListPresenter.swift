@@ -17,9 +17,6 @@ class AddListPresenter: AddListViewToPresenterProtocol{
     
     var router: AddListPresenterToRouterProtocol?
     
-    func closeAddListItemsViewController(navigationController: UINavigationController) {
-        router?.closeAddListItemsViewController(navigationController: navigationController)
-    }
 
 }
 

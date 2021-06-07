@@ -22,7 +22,7 @@ class AddListPopupViewController: UIViewController {
 
 extension AddListPopupViewController: AddListViewDelegate{
     func closePopup() {
-        presentor?.closeAddListItemsViewController(navigationController: navigationController!)
+        self.dismiss(animated: true, completion: nil)
     }
     
     
