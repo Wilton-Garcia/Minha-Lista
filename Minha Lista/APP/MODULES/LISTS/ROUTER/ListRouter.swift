@@ -26,9 +26,20 @@ class ListRouter: PresenterToRouterProtocol {
         return view
     }
     
+    
+    
+    
     func showPopupCreateList(navigationController: UINavigationController) {
-        //TODO: Implement function to show popList Here
+       let viewAdd = CreatePopupView()
+        navigationController.present(viewAdd, animated: true, completion: nil)
     }
     
+    func CreatePopupView() -> UIViewController{
+        let view = AddListPopupViewController()
+        
+        
+        
+        return view
+    }
     
 }

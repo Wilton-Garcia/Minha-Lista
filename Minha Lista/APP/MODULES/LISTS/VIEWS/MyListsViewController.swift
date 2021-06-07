@@ -56,7 +56,6 @@ class MyListsViewController : UIViewController{
     }
     
     @objc func callPopupAddList(){
-        print("Chamou o método")
         openPopup()
     }
     
@@ -65,7 +64,6 @@ class MyListsViewController : UIViewController{
 
 extension MyListsViewController:PresenterToViewProtocol{
     func getLists(itemList: [ItemList]) {
-        print("Entrou")
         data = itemList
         
     }
@@ -84,11 +82,7 @@ extension MyListsViewController: ListViewDeletegate{
     }
     
     func openPopup() {
-        print("Entrou no delegate para mostrar o popoup")
-        let navigation = UINavigationController(rootViewController: addListopupViewController)
-        navigation.navigationBar.isHidden = true
-        present(navigation, animated: true)
-        
+        presentor?.showListItemsViewController(navigationController: navigationController!)
     }
     
     func closePopup() {

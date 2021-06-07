@@ -11,11 +11,8 @@ class ListInteractor: PresenterToInteractorProtocol {
     
     var presenter: InteractorToPresenterProtocol?
     
-    
-    private let db = VirtualDataBase()
-    
     public func createList(listName: String){
-        db.insertItemList(ItemList: ItemList(ListName: listName))
+        DataBaseAcess.DataBase.insertItemList(ItemList: ItemList(ListName: listName))
     }
     
     public func validateListName(listName: String) -> Bool{
@@ -27,15 +24,15 @@ class ListInteractor: PresenterToInteractorProtocol {
     }
     
     public func listNameExist(listName: String) -> Bool{
-        return db.ListExists(ListName: listName)
+        return DataBaseAcess.DataBase.ListExists(ListName: listName)
     }
     
     public func getList(listName: String) -> ItemList{
-       return db.getItemListByName(ListName: listName)
+       return DataBaseAcess.DataBase.getItemListByName(ListName: listName)
     }
     
     public func getListsCount() -> Int{
-        return db.getItemListCout()
+        return DataBaseAcess.DataBase.getItemListCout()
     }
     
     public func populateDB(){
@@ -45,7 +42,7 @@ class ListInteractor: PresenterToInteractorProtocol {
     public func getLists(){
         self.createList(listName: "Supermercado")
         self.createList(listName: "Sacolão")
-        let lists = db.getAllItemList()
+        let lists = DataBaseAcess.DataBase.getAllItemList()
         self.presenter?.listLoadedWitchSucess(itemList: lists)
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class AddListPopupViewController: UIViewController {
 
-    
+    var presentor: ViewToPresenterProtocol?
     private let targerView = AddListaPopupView()
     
     public func dimissView(){
