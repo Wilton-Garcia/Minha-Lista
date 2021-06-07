@@ -9,4 +9,5 @@ import Foundation
 
 protocol AddListViewDelegate: AnyObject {
     func closePopup()
+    func addList(listName: String)
 }

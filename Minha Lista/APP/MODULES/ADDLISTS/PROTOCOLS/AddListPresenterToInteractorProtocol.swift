@@ -11,4 +11,6 @@ protocol AddListPresenterToInteractorProtocol: AnyObject {
     
     var presenter: AddListInteractorToPresenterProtocol? {get set}
     
+    func AddList(listName: String)
+    
 }

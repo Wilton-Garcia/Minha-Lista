@@ -21,6 +21,12 @@ class AddListPopupViewController: UIViewController {
 }
 
 extension AddListPopupViewController: AddListViewDelegate{
+    
+    func addList(listName: String) {
+        presentor?.AddList(listName: listName)
+        closePopup()
+    }
+    
     func closePopup() {
         self.dismiss(animated: true, completion: nil)
     }

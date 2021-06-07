@@ -13,5 +13,6 @@ protocol AddListViewToPresenterProtocol: AnyObject {
     var interactor: AddListPresenterToInteractorProtocol? {get set}
     var router: AddListPresenterToRouterProtocol? {get set}
     
+    func AddList(listName: String)
     
 }

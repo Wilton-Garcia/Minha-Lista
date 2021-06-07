@@ -19,10 +19,10 @@ class MyListsViewController : UIViewController{
         super.viewDidLoad()
         targetView.delegate = self
         self.view = targetView
-      //  AddListaPopupView().delegate = self
         presentor?.startGetLists()
-        targetView.data = data
     }
+    
+   
     
     //MARK: - Fim refatoração viper
     
@@ -64,8 +64,7 @@ class MyListsViewController : UIViewController{
 
 extension MyListsViewController:PresenterToViewProtocol{
     func getLists(itemList: [ItemList]) {
-        data = itemList
-        
+        targetView.data = itemList
     }
 }
 
@@ -78,7 +77,6 @@ extension MyListsViewController: ListViewDeletegate{
 
     func loadData() {
         presentor?.startGetLists()
-        print("Hello Word")
     }
     
     func openPopup() {

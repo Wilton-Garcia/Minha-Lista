@@ -44,6 +44,7 @@ class AddListaPopupView: UIView{
         let button = UIButton()
         button.setTitle("Cadastrar", for: .normal)
         button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(addList), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -112,6 +113,12 @@ class AddListaPopupView: UIView{
         delegate?.closePopup()
     }
     
+    @objc private func addList(){
+        if let listName = textFieldListName.text{
+            delegate?.addList(listName: listName)
+        }
+    }
+    
     private func setupLayout(){
         setupContentView()
         setupLabelListName()
@@ -132,5 +139,6 @@ class AddListaPopupView: UIView{
     
     @objc public func closeView(){
         delegate?.closePopup()
+        
     }
 }

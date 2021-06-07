@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class AddListPresenter: AddListViewToPresenterProtocol{
-
+  
     
     var view: AddListPresenterToViewProtocol?
     
@@ -17,6 +17,9 @@ class AddListPresenter: AddListViewToPresenterProtocol{
     
     var router: AddListPresenterToRouterProtocol?
     
+    func AddList(listName: String) {
+        interactor?.AddList(listName: listName)
+    }
 
 }
 
