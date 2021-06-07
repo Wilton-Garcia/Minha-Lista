@@ -12,16 +12,24 @@ class AddListPopupViewController: UIViewController {
     var presentor: AddListViewToPresenterProtocol?
     private let targerView = AddListaPopupView()
     
-    public func dimissView(){
-        dismiss(animated: true, completion: nil)
-    }
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        targerView.delegate = self
         self.view = targerView
     }
+}
+
+extension AddListPopupViewController: AddListViewDelegate{
+    func closePopup() {
+        presentor?.closeAddListItemsViewController(navigationController: navigationController!)
+    }
+    
+    
 }
 
 extension AddListPopupViewController: AddListPresenterToViewProtocol{
     
 }
+
+

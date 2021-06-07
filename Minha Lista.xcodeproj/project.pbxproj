@@ -16,6 +16,7 @@
 		4D147CD9266D9E7000EC306A /* AdListInteractorToPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D147CD8266D9E7000EC306A /* AdListInteractorToPresenterProtocol.swift */; };
 		4D147CDC266DA13700EC306A /* AddListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D147CDB266DA13700EC306A /* AddListPresenter.swift */; };
 		4D147CDF266DA1CB00EC306A /* AddListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D147CDE266DA1CB00EC306A /* AddListRouter.swift */; };
+		4D147CE1266DA7CC00EC306A /* AddListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D147CE0266DA7CC00EC306A /* AddListViewDelegate.swift */; };
 		4D4B6FD2265EFB8B00574F81 /* AddListPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B6FD1265EFB8B00574F81 /* AddListPopupView.swift */; };
 		4D4B6FD7265F0E2C00574F81 /* AddListPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B6FD6265F0E2C00574F81 /* AddListPopupViewController.swift */; };
 		4D6BA9A126641B4100F65B50 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BA9A026641B4100F65B50 /* ListPresenter.swift */; };
@@ -61,6 +62,7 @@
 		4D147CD8266D9E7000EC306A /* AdListInteractorToPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdListInteractorToPresenterProtocol.swift; sourceTree = "<group>"; };
 		4D147CDB266DA13700EC306A /* AddListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListPresenter.swift; sourceTree = "<group>"; };
 		4D147CDE266DA1CB00EC306A /* AddListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListRouter.swift; sourceTree = "<group>"; };
+		4D147CE0266DA7CC00EC306A /* AddListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListViewDelegate.swift; sourceTree = "<group>"; };
 		4D4B6FD1265EFB8B00574F81 /* AddListPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListPopupView.swift; sourceTree = "<group>"; };
 		4D4B6FD6265F0E2C00574F81 /* AddListPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListPopupViewController.swift; sourceTree = "<group>"; };
 		4D6BA9A026641B4100F65B50 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				4D147CD4266D9E1200EC306A /* AddListPresenterToRouterProtocol.swift */,
 				4D147CD6266D9E5300EC306A /* AddListPresenterToInteractorProtocol.swift */,
 				4D147CD8266D9E7000EC306A /* AdListInteractorToPresenterProtocol.swift */,
+				4D147CE0266DA7CC00EC306A /* AddListViewDelegate.swift */,
 			);
 			path = PROTOCOLS;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				4DC4E974266195480029321F /* ListRouter.swift in Sources */,
 				4DD52D202658598A0034CDA4 /* ListInteractor.swift in Sources */,
 				4D147CCE266D9C9600EC306A /* DataBaseAcess.swift in Sources */,
+				4D147CE1266DA7CC00EC306A /* AddListViewDelegate.swift in Sources */,
 				4D147CD3266D9DFB00EC306A /* AddListPresenterToViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

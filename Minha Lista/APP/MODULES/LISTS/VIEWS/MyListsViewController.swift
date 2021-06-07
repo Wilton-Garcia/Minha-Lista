@@ -19,7 +19,7 @@ class MyListsViewController : UIViewController{
         super.viewDidLoad()
         targetView.delegate = self
         self.view = targetView
-        AddListaPopupView().delegate = self
+      //  AddListaPopupView().delegate = self
         presentor?.startGetLists()
         targetView.data = data
     }

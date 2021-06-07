@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
 protocol AddListViewToPresenterProtocol: AnyObject {
     var view: AddListPresenterToViewProtocol? {get set}
     var interactor: AddListPresenterToInteractorProtocol? {get set}
     var router: AddListPresenterToRouterProtocol? {get set}
+    
+    func closeAddListItemsViewController(navigationController: UINavigationController)
     
 }

@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import UIKit
 
 protocol AddListPresenterToRouterProtocol: AnyObject {
-    
+    func closeAddListItemsViewController(navigationController: UINavigationController)
 }

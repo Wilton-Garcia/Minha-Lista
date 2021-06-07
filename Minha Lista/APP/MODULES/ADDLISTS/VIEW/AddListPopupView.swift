@@ -12,7 +12,7 @@ class AddListaPopupView: UIView{
     
     //MARK: - Private properties
     
-    public weak var delegate: ListViewDeletegate?
+    public weak var delegate: AddListViewDelegate?
     
     private var clique = 0;
     
@@ -109,7 +109,6 @@ class AddListaPopupView: UIView{
     }
     
     @objc private func close(){
-        print("closing")
         delegate?.closePopup()
     }
     

@@ -30,7 +30,6 @@ class ListRouter: PresenterToRouterProtocol {
     
     
     func showPopupCreateList(navigationController: UINavigationController) {
-        print("Entrou")
         let viewAdd = AddListRouter.createAddListModule()
         navigationController.present(viewAdd, animated: true, completion: nil)
     }

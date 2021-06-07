@@ -6,8 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
 class AddListRouter: AddListPresenterToRouterProtocol{
+    func closeAddListItemsViewController(navigationController: UINavigationController) {
+        navigationController.dismiss(animated: true, completion: nil)
+    }
+    
     static func createAddListModule() -> AddListPopupViewController {
         let view = AddListPopupViewController()
         
@@ -23,10 +28,6 @@ class AddListRouter: AddListPresenterToRouterProtocol{
         presenter.interactor = interactor
         interactor.presenter = presenter
 
-        print(
-        "View retornada com sucesso"
-        )
-        
         return view
         
     }
