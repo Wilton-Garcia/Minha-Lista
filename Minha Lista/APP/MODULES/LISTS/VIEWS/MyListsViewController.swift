@@ -82,12 +82,5 @@ extension MyListsViewController: ListViewDeletegate{
     func openPopup() {
         presentor?.showListItemsViewController(navigationController: navigationController!)
     }
-    
-    func closePopup() {
-        print("Entrou no delegate para fechar o popoup")
-        let navigation = UINavigationController(rootViewController: addListopupViewController)
-        navigation.navigationBar.isHidden = true
-        dismiss(animated: true, completion: nil)
-    }
 }
 
