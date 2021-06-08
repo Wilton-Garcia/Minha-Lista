@@ -85,11 +85,11 @@ extension MyListsView: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
-    
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+}
+
+extension MyListsView: TargerViewAcess{
+    func reloadTable() {
         delegate?.loadData()
         tableViewMyLists.reloadData()
     }
-    
 }

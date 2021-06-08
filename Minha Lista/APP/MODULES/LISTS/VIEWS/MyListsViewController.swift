@@ -8,25 +8,14 @@
 import UIKit
 
 class MyListsViewController : UIViewController{
-    //MARK: - Início refatoração para viper
-    var presentor: ViewToPresenterProtocol?
+    
+    weak var presentor: ViewToPresenterProtocol?
+    weak var router: PresenterToRouterProtocol?
+    weak var targetViewAcess: TargerViewAcess?
+    
     lazy var targetView =  MyListsView()
-
     
     public var data = [ItemList]()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        targetView.delegate = self
-        self.view = targetView
-        presentor?.startGetLists()
-    }
-    
-   
-    
-    //MARK: - Fim refatoração viper
-    
-  
     private let addListopupViewController = AddListPopupViewController()
     
     private let navigationBar: UINavigationBar = {
@@ -51,6 +40,14 @@ class MyListsViewController : UIViewController{
         navigationBar.setItems([navigationItem], animated: false)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        targetView.delegate = self
+        targetViewAcess = targetView
+        self.view = targetView
+        presentor?.startGetLists()
+    }
+    
     override  func viewWillLayoutSubviews(){
         setupNavigationBar()
     }
@@ -58,8 +55,6 @@ class MyListsViewController : UIViewController{
     @objc func callPopupAddList(){
         openPopup()
     }
-    
-    var router: PresenterToRouterProtocol?
 }
 
 extension MyListsViewController:PresenterToViewProtocol{
@@ -68,13 +63,11 @@ extension MyListsViewController:PresenterToViewProtocol{
     }
 }
 
-
 extension MyListsViewController: ListViewDeletegate{
     func openList() {
         //TODO: Implement function to load list
     }
     
-
     func loadData() {
         presentor?.startGetLists()
     }
@@ -84,3 +77,6 @@ extension MyListsViewController: ListViewDeletegate{
     }
 }
 
+protocol TargerViewAcess: AnyObject{
+    func reloadTable()
+}
