@@ -9,9 +9,12 @@ import UIKit
 
 class ItemListView: UIView {
 
+    
+    
     private let listNameUiLabel: UILabel = {
        let label = UILabel()
-        return label
+        
+       return label
     }()
     
     private let itemListTableView: UITableView = {
