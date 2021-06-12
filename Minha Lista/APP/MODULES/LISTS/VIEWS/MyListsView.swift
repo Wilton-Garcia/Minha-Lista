@@ -41,6 +41,13 @@ class MyListsView : UIView{
         backgroundColor = .white
         setupMyListTableView()
     }
+    
+    @objc private func reloadTable(notification: Notification){
+        delegate?.loadData()
+        tableViewMyLists.reloadData()
+    }
+    
+    
      
     //MARK: - Init
     
@@ -50,6 +57,8 @@ class MyListsView : UIView{
             tableViewMyLists.delegate = self
             tableViewMyLists.dataSource = self
             setupLayout()
+            NotificationCenter.default.addObserver(self, selector: #selector(self.reloadTable(notification:)), name: Notification.Name("DataBaseUpdate"), object: nil)
+
         
         }
     }
@@ -84,12 +93,5 @@ extension  MyListsView : UITableViewDataSource{
 extension MyListsView: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
-    }
-}
-
-extension MyListsView: TargerViewAcess{
-    func reloadTable() {
-        delegate?.loadData()
-        tableViewMyLists.reloadData()
     }
 }

@@ -11,7 +11,6 @@ class MyListsViewController : UIViewController{
     
     weak var presentor: ViewToPresenterProtocol?
     weak var router: PresenterToRouterProtocol?
-    weak var targetViewAcess: TargerViewAcess?
     
     lazy var targetView =  MyListsView()
     
@@ -43,7 +42,6 @@ class MyListsViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         targetView.delegate = self
-        targetViewAcess = targetView
         self.view = targetView
         presentor?.startGetLists()
     }
