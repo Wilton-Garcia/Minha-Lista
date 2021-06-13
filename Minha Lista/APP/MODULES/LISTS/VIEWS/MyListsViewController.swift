@@ -63,7 +63,7 @@ extension MyListsViewController:PresenterToViewProtocol{
 
 extension MyListsViewController: ListViewDeletegate{
     func openList() {
-        //TODO: Implement function to load list
+        //
     }
     
     func loadData() {

@@ -78,6 +78,10 @@ extension  MyListsView : UITableViewDataSource{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        delegate?.openList()
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.openList()
     }
@@ -94,4 +98,5 @@ extension MyListsView: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
+    
 }
