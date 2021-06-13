@@ -8,18 +8,18 @@
 import Foundation
 import UIKit
 
-class ListPresenter: ViewToPresenterProtocol {
+class ListPresenter: ListsViewToPresenterProtocol {
   
     
   
     
  
     
-    var view: PresenterToViewProtocol?
+    var view: ListsPresenterToViewProtocol?
     
-    var interactor: PresenterToInteractorProtocol?
+    var interactor: ListsPresenterToInteractorProtocol?
     
-    var router: PresenterToRouterProtocol?
+    var router: ListsPresenterToRouterProtocol?
     
     func startGetLists() {
         interactor?.getLists()
@@ -35,7 +35,7 @@ class ListPresenter: ViewToPresenterProtocol {
     
 }
 
-extension ListPresenter: InteractorToPresenterProtocol{
+extension ListPresenter: ListsInteractorToPresenterProtocol{
     func listLoadedWitchSucess(itemList: [ItemList]) {
         view?.getLists(itemList: itemList)
     }

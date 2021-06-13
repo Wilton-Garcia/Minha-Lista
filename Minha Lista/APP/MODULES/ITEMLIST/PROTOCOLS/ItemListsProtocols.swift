@@ -21,7 +21,7 @@ protocol ItemListViewToPresenterProtocol: AnyObject {
 }
 
 protocol  ItemListPresenterToViewProtocol: AnyObject {
-    func getLists(itemList: [ItemList])
+    func getList(itemList: ItemList)
 }
 
 protocol ItemListPresenterToRouterProtocol: AnyObject {

@@ -7,9 +7,9 @@
 
 import Foundation
 
-class ListInteractor: PresenterToInteractorProtocol {
+class ListInteractor: ListsPresenterToInteractorProtocol {
     
-    var presenter: InteractorToPresenterProtocol?
+    var presenter: ListsInteractorToPresenterProtocol?
     
     public func createList(listName: String){
         DataBaseAcess.DataBase.insertItemList(ItemList: ItemList(ListName: listName))

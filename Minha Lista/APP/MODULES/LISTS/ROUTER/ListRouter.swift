@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-class ListRouter: PresenterToRouterProtocol {
+class ListRouter: ListsPresenterToRouterProtocol {
     static func createMyListViewController() -> MyListsViewController {
         let view = MyListsViewController()
         
-        let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = ListPresenter()
-        let interactor: PresenterToInteractorProtocol = ListInteractor()
-        let router: PresenterToRouterProtocol = ListRouter()
+        let presenter: ListsViewToPresenterProtocol & ListsInteractorToPresenterProtocol = ListPresenter()
+        let interactor: ListsPresenterToInteractorProtocol = ListInteractor()
+        let router: ListsPresenterToRouterProtocol = ListRouter()
         
         view.presentor = presenter
  

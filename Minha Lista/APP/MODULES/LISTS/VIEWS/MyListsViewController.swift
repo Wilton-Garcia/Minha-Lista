@@ -9,8 +9,8 @@ import UIKit
 
 class MyListsViewController : UIViewController{
     
-    weak var presentor: ViewToPresenterProtocol?
-    weak var router: PresenterToRouterProtocol?
+    weak var presentor: ListsViewToPresenterProtocol?
+    weak var router: ListsPresenterToRouterProtocol?
     
     lazy var targetView =  MyListsView()
     
@@ -55,7 +55,7 @@ class MyListsViewController : UIViewController{
     }
 }
 
-extension MyListsViewController:PresenterToViewProtocol{
+extension MyListsViewController:ListsPresenterToViewProtocol{
     func getLists(itemList: [ItemList]) {
         targetView.data = itemList
     }

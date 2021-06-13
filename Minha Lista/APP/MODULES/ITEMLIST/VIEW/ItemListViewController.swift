@@ -22,9 +22,6 @@ class ItemListViewController: UIViewController{
 }
 
 extension ItemListViewController: ItemListPresenterToViewProtocol{
-    func getLists(itemList: [ItemList]) {
-        //
+    func getList(itemList: ItemList) {
     }
-    
-    
 }

@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-protocol ViewToPresenterProtocol: AnyObject {
-    var view: PresenterToViewProtocol? {get set}
-    var interactor: PresenterToInteractorProtocol? {get set}
-    var router: PresenterToRouterProtocol? {get set}
+protocol ListsViewToPresenterProtocol: AnyObject {
+    var view: ListsPresenterToViewProtocol? {get set}
+    var interactor: ListsPresenterToInteractorProtocol? {get set}
+    var router: ListsPresenterToRouterProtocol? {get set}
     
     func startGetLists()
     
@@ -20,11 +20,11 @@ protocol ViewToPresenterProtocol: AnyObject {
     
 }
 
-protocol  PresenterToViewProtocol: AnyObject {
+protocol  ListsPresenterToViewProtocol: AnyObject {
     func getLists(itemList: [ItemList])
 }
 
-protocol PresenterToRouterProtocol: AnyObject {
+protocol ListsPresenterToRouterProtocol: AnyObject {
     
     static func createMyListViewController() -> MyListsViewController
     
@@ -33,13 +33,13 @@ protocol PresenterToRouterProtocol: AnyObject {
     func openList(navigationController: UINavigationController, listName: String)
 }
 
-protocol InteractorToPresenterProtocol: AnyObject{
+protocol ListsInteractorToPresenterProtocol: AnyObject{
     func listLoadedWitchSucess(itemList: [ItemList])
 }
 
-protocol PresenterToInteractorProtocol: AnyObject {
+protocol ListsPresenterToInteractorProtocol: AnyObject {
     
-    var presenter: InteractorToPresenterProtocol? {get set}
+    var presenter: ListsInteractorToPresenterProtocol? {get set}
     
     func getLists()
 }
