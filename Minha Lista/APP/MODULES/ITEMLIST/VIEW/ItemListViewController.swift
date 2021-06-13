@@ -13,8 +13,11 @@ class ItemListViewController: UIViewController{
     weak var presentor: ItemListViewToPresenterProtocol?
     weak var router: ItemListPresenterToRouterProtocol?
     
+    let targetView = ItemListView()
+    
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
+        self.view = targetView
     }
 }
 

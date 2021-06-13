@@ -40,6 +40,8 @@ class ListInteractor: PresenterToInteractorProtocol {
     }
     
     public func getLists(){
+        createList(listName: "Supermercado")
+        createList(listName: "Sacolão")
         let lists = DataBaseAcess.DataBase.getAllItemList()
         self.presenter?.listLoadedWitchSucess(itemList: lists)
     }

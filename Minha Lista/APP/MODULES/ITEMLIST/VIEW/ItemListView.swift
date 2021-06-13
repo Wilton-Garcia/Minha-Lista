@@ -14,11 +14,13 @@ class ItemListView: UIView {
     private let listNameUiLabel: UILabel = {
        let label = UILabel()
         label.text = "Nome da Lista"
+        label.translatesAutoresizingMaskIntoConstraints = false
        return label
     }()
     
     private let itemListTableView: UITableView = {
        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
     
@@ -30,9 +32,9 @@ class ItemListView: UIView {
     private func setupListName(){
         self.addSubview(listNameUiLabel)
         NSLayoutConstraint.activate([
-            itemListTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            itemListTableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: -20),
-            itemListTableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 20)
+            listNameUiLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            listNameUiLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            listNameUiLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])
     }
     private func setupItemList(){
@@ -46,6 +48,13 @@ class ItemListView: UIView {
             
         ])
     }
+    
+    convenience init() {
+            self.init(frame:.zero)
+            setupView()
+        backgroundColor = .orange
+        
+        }
 
 }
 extension ItemListView: UITableViewDelegate{

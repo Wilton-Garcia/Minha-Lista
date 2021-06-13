@@ -16,6 +16,6 @@ protocol ViewToPresenterProtocol: AnyObject {
     func startGetLists()
     
     func showListItemsViewController(navigationController: UINavigationController)
-    
+    func openList(navigationController: UINavigationController, listName: String)
     
 }

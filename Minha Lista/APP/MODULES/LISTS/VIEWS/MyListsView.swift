@@ -17,7 +17,7 @@ class MyListsView : UIView{
     private let tableViewMyLists: UITableView = {
         let myLists = UITableView()
         myLists.backgroundColor = .clear
-        myLists.allowsSelection = false
+       // myLists.allowsSelection = false
         myLists.translatesAutoresizingMaskIntoConstraints = false
         return myLists
     }()
@@ -78,12 +78,9 @@ extension  MyListsView : UITableViewDataSource{
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        delegate?.openList()
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.openList()
+        delegate?.openList(listName: "Supermercado")
+        print("Selecionou Row")
     }
     
     private func addExtaLayoutConfigsToTableView(){

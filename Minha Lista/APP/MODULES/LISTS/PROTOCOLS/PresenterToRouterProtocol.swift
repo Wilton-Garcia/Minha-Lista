@@ -13,4 +13,6 @@ protocol PresenterToRouterProtocol: AnyObject {
     static func createMyListViewController() -> MyListsViewController
     
     func showPopupCreateList(navigationController: UINavigationController)
+    
+    func openList(navigationController: UINavigationController, listName: String)
 }

@@ -9,6 +9,10 @@ import Foundation
 import UIKit
 
 class ListPresenter: ViewToPresenterProtocol {
+  
+    
+  
+    
  
     
     var view: PresenterToViewProtocol?
@@ -24,6 +28,11 @@ class ListPresenter: ViewToPresenterProtocol {
     func showListItemsViewController(navigationController: UINavigationController) {
         router?.showPopupCreateList(navigationController: navigationController)
     }
+    
+    func openList(navigationController: UINavigationController, listName: String) {
+        router?.openList(navigationController: navigationController, listName: listName)
+    }
+    
 }
 
 extension ListPresenter: InteractorToPresenterProtocol{

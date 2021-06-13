@@ -9,11 +9,7 @@ import Foundation
 import UIKit
 
 class ItemListRouter: ItemListPresenterToRouterProtocol {
-    static func createMyListViewController() -> UIViewController {
-        let v = UIViewController()
-        return v
-    }
-    
+  
     static func createMyListViewController() -> ItemListViewController {
         let view = ItemListViewController()
         
