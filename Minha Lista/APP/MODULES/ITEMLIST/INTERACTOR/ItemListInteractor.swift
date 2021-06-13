@@ -7,6 +7,12 @@
 
 import Foundation
 
-class ItemListInteractor{
+class ItemListInteractor: ItemListPresenterToInteractorProtocol{
+    var presenter: ItemListInteractorToPresenterProtocol?
+    
+    func getLists() {
+        //TODO
+    }
+    
     
 }
