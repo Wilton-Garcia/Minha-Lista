@@ -36,7 +36,7 @@ class ListRouter: PresenterToRouterProtocol {
     
     func openList(navigationController: UINavigationController, listName: String){
         print("Acessou o Router")
-        let viewList = ItemListRouter.createMyListViewController()
+        let viewList = ItemListRouter.createItemListViewController()
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         navigationController.present(viewList, animated: true, completion: nil)

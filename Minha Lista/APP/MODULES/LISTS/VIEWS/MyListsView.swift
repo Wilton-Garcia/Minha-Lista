@@ -17,7 +17,6 @@ class MyListsView : UIView{
     private let tableViewMyLists: UITableView = {
         let myLists = UITableView()
         myLists.backgroundColor = .clear
-       // myLists.allowsSelection = false
         myLists.translatesAutoresizingMaskIntoConstraints = false
         return myLists
     }()
@@ -58,8 +57,6 @@ class MyListsView : UIView{
             tableViewMyLists.dataSource = self
             setupLayout()
             NotificationCenter.default.addObserver(self, selector: #selector(self.reloadTable(notification:)), name: Notification.Name("DataBaseUpdate"), object: nil)
-
-        
         }
     }
 
@@ -80,20 +77,16 @@ extension  MyListsView : UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.openList(listName: "Supermercado")
-        print("Selecionou Row")
     }
     
     private func addExtaLayoutConfigsToTableView(){
         tableViewMyLists.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableViewMyLists.backgroundColor = .none
     }
-    
-    
 }
 
 extension MyListsView: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
-    
 }

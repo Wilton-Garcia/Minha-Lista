@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol ItemListViewToPresenterProtocol: AnyObject {
+    
     var view: ItemListPresenterToViewProtocol? {get set}
     var interactor: ItemListPresenterToInteractorProtocol? {get set}
     var router: ItemListPresenterToRouterProtocol? {get set}
@@ -16,7 +17,6 @@ protocol ItemListViewToPresenterProtocol: AnyObject {
     func startGetLists()
     
     func showListItemsViewController(navigationController: UINavigationController)
-    
     
 }
 
@@ -26,9 +26,8 @@ protocol  ItemListPresenterToViewProtocol: AnyObject {
 
 protocol ItemListPresenterToRouterProtocol: AnyObject {
     
-    static func createMyListViewController() -> ItemListViewController
+    static func createItemListViewController() -> ItemListViewController
     
-    func showPopupCreateList(navigationController: UINavigationController)
 }
 
 protocol ItemListPresenterToInteractorProtocol: AnyObject {
@@ -39,6 +38,8 @@ protocol ItemListPresenterToInteractorProtocol: AnyObject {
 }
 
 protocol ItemListInteractorToPresenterProtocol: AnyObject{
+    
     func ItemListlistLoadedWitchSucess(itemList: [ItemList])
+    
 }
 

@@ -22,15 +22,11 @@
 		4D3AAE6226759F330089CDC5 /* ItemListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AAE6126759F330089CDC5 /* ItemListRouter.swift */; };
 		4D3AAE6426759F990089CDC5 /* ItemListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AAE6326759F990089CDC5 /* ItemListPresenter.swift */; };
 		4D3AAE6626759FB40089CDC5 /* ItemListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AAE6526759FB40089CDC5 /* ItemListInteractor.swift */; };
+		4D3AAE6826765C530089CDC5 /* ListsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AAE6726765C530089CDC5 /* ListsProtocols.swift */; };
 		4D4B6FD2265EFB8B00574F81 /* AddListPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B6FD1265EFB8B00574F81 /* AddListPopupView.swift */; };
 		4D4B6FD7265F0E2C00574F81 /* AddListPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B6FD6265F0E2C00574F81 /* AddListPopupViewController.swift */; };
 		4D6BA9A126641B4100F65B50 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BA9A026641B4100F65B50 /* ListPresenter.swift */; };
 		4D6BA9A32665201900F65B50 /* ListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BA9A22665201900F65B50 /* ListViewDelegate.swift */; };
-		4D6BA9A9266555AE00F65B50 /* ViewToPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BA9A8266555AE00F65B50 /* ViewToPresenterProtocol.swift */; };
-		4D6BA9AB266555ED00F65B50 /* PresenterToViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BA9AA266555ED00F65B50 /* PresenterToViewProtocol.swift */; };
-		4D6BA9AD2665565B00F65B50 /* PresenterToInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BA9AC2665565B00F65B50 /* PresenterToInteractorProtocol.swift */; };
-		4D6BA9AF266556AC00F65B50 /* PresenterToRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BA9AE266556AC00F65B50 /* PresenterToRouterProtocol.swift */; };
-		4D6BA9B1266557A600F65B50 /* InteractorToPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BA9B0266557A600F65B50 /* InteractorToPresenterProtocol.swift */; };
 		4D767CCA265AD7B6000661FC /* ListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D767CC9265AD7B6000661FC /* ListInteractorTest.swift */; };
 		4D767CD2265AD7D8000661FC /* VirtualDataBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D767CD1265AD7D8000661FC /* VirtualDataBaseTest.swift */; };
 		4D832BE82654414900752AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832BE72654414900752AF8 /* AppDelegate.swift */; };
@@ -74,15 +70,11 @@
 		4D3AAE6126759F330089CDC5 /* ItemListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListRouter.swift; sourceTree = "<group>"; };
 		4D3AAE6326759F990089CDC5 /* ItemListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListPresenter.swift; sourceTree = "<group>"; };
 		4D3AAE6526759FB40089CDC5 /* ItemListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListInteractor.swift; sourceTree = "<group>"; };
+		4D3AAE6726765C530089CDC5 /* ListsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsProtocols.swift; sourceTree = "<group>"; };
 		4D4B6FD1265EFB8B00574F81 /* AddListPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListPopupView.swift; sourceTree = "<group>"; };
 		4D4B6FD6265F0E2C00574F81 /* AddListPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListPopupViewController.swift; sourceTree = "<group>"; };
 		4D6BA9A026641B4100F65B50 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		4D6BA9A22665201900F65B50 /* ListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDelegate.swift; sourceTree = "<group>"; };
-		4D6BA9A8266555AE00F65B50 /* ViewToPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewToPresenterProtocol.swift; sourceTree = "<group>"; };
-		4D6BA9AA266555ED00F65B50 /* PresenterToViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterToViewProtocol.swift; sourceTree = "<group>"; };
-		4D6BA9AC2665565B00F65B50 /* PresenterToInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterToInteractorProtocol.swift; sourceTree = "<group>"; };
-		4D6BA9AE266556AC00F65B50 /* PresenterToRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterToRouterProtocol.swift; sourceTree = "<group>"; };
-		4D6BA9B0266557A600F65B50 /* InteractorToPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorToPresenterProtocol.swift; sourceTree = "<group>"; };
 		4D767CC7265AD7B6000661FC /* MinhaListaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinhaListaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D767CC9265AD7B6000661FC /* ListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorTest.swift; sourceTree = "<group>"; };
 		4D767CCB265AD7B6000661FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -192,11 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				4D6BA9A22665201900F65B50 /* ListViewDelegate.swift */,
-				4D6BA9A8266555AE00F65B50 /* ViewToPresenterProtocol.swift */,
-				4D6BA9AA266555ED00F65B50 /* PresenterToViewProtocol.swift */,
-				4D6BA9AE266556AC00F65B50 /* PresenterToRouterProtocol.swift */,
-				4D6BA9AC2665565B00F65B50 /* PresenterToInteractorProtocol.swift */,
-				4D6BA9B0266557A600F65B50 /* InteractorToPresenterProtocol.swift */,
+				4D3AAE6726765C530089CDC5 /* ListsProtocols.swift */,
 			);
 			path = PROTOCOLS;
 			sourceTree = "<group>";
@@ -523,12 +511,9 @@
 				4D3AAE6426759F990089CDC5 /* ItemListPresenter.swift in Sources */,
 				4D3AAE602675823F0089CDC5 /* ItemListViewController.swift in Sources */,
 				4D3AAE6626759FB40089CDC5 /* ItemListInteractor.swift in Sources */,
-				4D6BA9AD2665565B00F65B50 /* PresenterToInteractorProtocol.swift in Sources */,
-				4D6BA9A9266555AE00F65B50 /* ViewToPresenterProtocol.swift in Sources */,
 				4D6BA9A126641B4100F65B50 /* ListPresenter.swift in Sources */,
 				4D832C0226544D8400752AF8 /* MyListsView.swift in Sources */,
 				4D832BEC2654414900752AF8 /* ViewController.swift in Sources */,
-				4D6BA9AB266555ED00F65B50 /* PresenterToViewProtocol.swift in Sources */,
 				4D6BA9A32665201900F65B50 /* ListViewDelegate.swift in Sources */,
 				4D147CD5266D9E1200EC306A /* AddListPresenterToRouterProtocol.swift in Sources */,
 				4D147CDF266DA1CB00EC306A /* AddListRouter.swift in Sources */,
@@ -538,12 +523,11 @@
 				4D832C07265456EC00752AF8 /* ItemList.swift in Sources */,
 				4D147CD7266D9E5300EC306A /* AddListPresenterToInteractorProtocol.swift in Sources */,
 				4D4B6FD2265EFB8B00574F81 /* AddListPopupView.swift in Sources */,
+				4D3AAE6826765C530089CDC5 /* ListsProtocols.swift in Sources */,
 				4DD52D23265861370034CDA4 /* VirtualDataBase.swift in Sources */,
 				4D832BE82654414900752AF8 /* AppDelegate.swift in Sources */,
 				4D832C092655F0E300752AF8 /* ListCellView.swift in Sources */,
 				4D147CCC266D9AB000EC306A /* AddListInteractor.swift in Sources */,
-				4D6BA9B1266557A600F65B50 /* InteractorToPresenterProtocol.swift in Sources */,
-				4D6BA9AF266556AC00F65B50 /* PresenterToRouterProtocol.swift in Sources */,
 				4D147CD9266D9E7000EC306A /* AdListInteractorToPresenterProtocol.swift in Sources */,
 				4D147CDC266DA13700EC306A /* AddListPresenter.swift in Sources */,
 				4D832C05265456D500752AF8 /* Item.swift in Sources */,
