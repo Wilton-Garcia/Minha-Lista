@@ -63,7 +63,6 @@ extension MyListsViewController:ListsPresenterToViewProtocol{
 
 extension MyListsViewController: ListViewDeletegate{
     func openList(listName: String) {
-        print("Entrou na ViewController")
         presentor?.openList(navigationController: navigationController!, listName: listName)
     }
     

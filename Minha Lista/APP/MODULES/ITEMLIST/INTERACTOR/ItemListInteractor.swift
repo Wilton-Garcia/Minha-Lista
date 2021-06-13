@@ -10,8 +10,9 @@ import Foundation
 class ItemListInteractor: ItemListPresenterToInteractorProtocol{
     var presenter: ItemListInteractorToPresenterProtocol?
     
-    func getLists() {
-        //TODO
+    func getList(listName: String) {
+      let itemList = DataBaseAcess.DataBase.getItemListByName(ListName: listName)
+        presenter?.ItemListlistLoadedWitchSucess(itemList: itemList)
     }
     
     

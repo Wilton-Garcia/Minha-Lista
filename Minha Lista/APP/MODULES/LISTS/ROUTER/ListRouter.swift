@@ -10,6 +10,8 @@ import UIKit
 
 class ListRouter: ListsPresenterToRouterProtocol {
     static func createMyListViewController() -> MyListsViewController {
+        
+        
         let view = MyListsViewController()
         
         let presenter: ListsViewToPresenterProtocol & ListsInteractorToPresenterProtocol = ListPresenter()
@@ -35,8 +37,7 @@ class ListRouter: ListsPresenterToRouterProtocol {
     }
     
     func openList(navigationController: UINavigationController, listName: String){
-        print("Acessou o Router")
-        let viewList = ItemListRouter.createItemListViewController()
+        let viewList = ItemListRouter.createItemListViewController(itemListName: listName)
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         navigationController.present(viewList, animated: true, completion: nil)

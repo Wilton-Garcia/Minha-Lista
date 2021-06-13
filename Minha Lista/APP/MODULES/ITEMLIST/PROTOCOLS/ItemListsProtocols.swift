@@ -14,7 +14,7 @@ protocol ItemListViewToPresenterProtocol: AnyObject {
     var interactor: ItemListPresenterToInteractorProtocol? {get set}
     var router: ItemListPresenterToRouterProtocol? {get set}
     
-    func startGetLists()
+    func startLoadItemList(listName: String)
     
     func showListItemsViewController(navigationController: UINavigationController)
     
@@ -26,7 +26,7 @@ protocol  ItemListPresenterToViewProtocol: AnyObject {
 
 protocol ItemListPresenterToRouterProtocol: AnyObject {
     
-    static func createItemListViewController() -> ItemListViewController
+    static func createItemListViewController(itemListName: String) -> ItemListViewController
     
 }
 
@@ -34,12 +34,12 @@ protocol ItemListPresenterToInteractorProtocol: AnyObject {
     
     var presenter: ItemListInteractorToPresenterProtocol? {get set}
     
-    func getLists()
+    func getList(listName: String)
 }
 
 protocol ItemListInteractorToPresenterProtocol: AnyObject{
     
-    func ItemListlistLoadedWitchSucess(itemList: [ItemList])
+    func ItemListlistLoadedWitchSucess(itemList: ItemList)
     
 }
 

@@ -15,8 +15,8 @@ class ItemListPresenter: ItemListViewToPresenterProtocol{
     
     var router: ItemListPresenterToRouterProtocol?
     
-    func startGetLists() {
-        //TODO
+    func startLoadItemList(listName: String) {
+        interactor?.getList(listName: listName)
     }
     
     func showListItemsViewController(navigationController: UINavigationController) {
@@ -27,8 +27,8 @@ class ItemListPresenter: ItemListViewToPresenterProtocol{
 }
 
 extension ItemListPresenter: ItemListInteractorToPresenterProtocol{
-    func ItemListlistLoadedWitchSucess(itemList: [ItemList]) {
-        //TODO
+    func ItemListlistLoadedWitchSucess(itemList: ItemList) {
+        view?.getList(itemList: itemList)
     }
     
     func listLoadedWitchSucess(itemList: [ItemList]) {

@@ -9,7 +9,7 @@ import UIKit
 
 class ItemListView: UIView {
 
-    var data: ItemList?
+    var data: ItemList!
     
     private let listNameUiLabel: UILabel = {
        let label = UILabel()
@@ -40,37 +40,40 @@ class ItemListView: UIView {
     private func setupItemList(){
         self.addSubview(itemListTableView)
         
+        itemListTableView.register(ItemCellView.self, forCellReuseIdentifier: "itemCell")
+        
         NSLayoutConstraint.activate([
             itemListTableView.topAnchor.constraint(equalTo: listNameUiLabel.bottomAnchor, constant: 20),
-            itemListTableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: -20),
-            itemListTableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 20),
+            itemListTableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            itemListTableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             itemListTableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
-            
         ])
     }
     
     convenience init() {
             self.init(frame:.zero)
             setupView()
+        itemListTableView.delegate = self
+        itemListTableView.dataSource = self
         backgroundColor = .orange
-        
-        }
-
+    }
 }
+
 extension ItemListView: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100
+    }
 }
 extension ItemListView: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let itemsInList =  data?.getList().count else {
-            return 0
-        }
-        
-        return itemsInList
+        return data.getList().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = itemListTableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! ItemCellView
+        let data = data.getList()
+        let item = data[indexPath.row]
+        cell.fillCell(item: item)
         return cell
     }
 }

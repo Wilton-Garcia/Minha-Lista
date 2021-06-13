@@ -10,6 +10,8 @@ import UIKit
 
 class ItemListViewController: UIViewController{
     
+    var itemListName: String!
+    
     weak var presentor: ItemListViewToPresenterProtocol?
     weak var router: ItemListPresenterToRouterProtocol?
     
@@ -18,10 +20,12 @@ class ItemListViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = targetView
+        presentor?.startLoadItemList(listName: itemListName)
     }
 }
 
 extension ItemListViewController: ItemListPresenterToViewProtocol{
     func getList(itemList: ItemList) {
+        targetView.data = itemList
     }
 }
