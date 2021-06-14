@@ -76,7 +76,8 @@ extension  MyListsView : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.openList(listName: "Supermercado")
+        let listName = data[indexPath.row].getListName()
+        delegate?.openList(listName: listName)
     }
     
     private func addExtaLayoutConfigsToTableView(){
