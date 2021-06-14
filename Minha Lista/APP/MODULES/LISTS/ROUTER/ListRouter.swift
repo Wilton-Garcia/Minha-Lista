@@ -38,9 +38,9 @@ class ListRouter: ListsPresenterToRouterProtocol {
     
     func openList(navigationController: UINavigationController, listName: String){
         let viewList = ItemListRouter.createItemListViewController(itemListName: listName)
-        navigationController.modalPresentationStyle = .fullScreen
-        navigationController.isNavigationBarHidden = false
-        navigationController.present(viewList, animated: true, completion: nil)
+        viewList.modalPresentationStyle = .fullScreen
+        viewList.navigationController?.isToolbarHidden = false
+        navigationController.pushViewController(viewList, animated: true)
     }
     
     
