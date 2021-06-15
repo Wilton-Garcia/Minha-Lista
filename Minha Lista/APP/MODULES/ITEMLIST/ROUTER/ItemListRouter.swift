@@ -15,7 +15,7 @@ class ItemListRouter: ItemListPresenterToRouterProtocol {
         
         view.itemListName = itemListName
         
-        let presenter: ItemListViewToPresenterProtocol & ItemListInteractorToPresenterProtocol = ItemListPresenter()
+        let presenter: AddItemViewToPresenterProtocol & ItemListInteractorToPresenterProtocol = ItemListPresenter()
         let interactor: ItemListPresenterToInteractorProtocol = ItemListInteractor()
         let router: ItemListPresenterToRouterProtocol = ItemListRouter()
         

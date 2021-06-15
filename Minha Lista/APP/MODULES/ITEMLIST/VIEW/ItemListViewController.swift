@@ -12,7 +12,7 @@ class ItemListViewController: UIViewController{
     
     var itemListName: String!
     
-    weak var presentor: ItemListViewToPresenterProtocol?
+    weak var presentor: AddItemViewToPresenterProtocol?
     weak var router: ItemListPresenterToRouterProtocol?
     
     let targetView = ItemListView()

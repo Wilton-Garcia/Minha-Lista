@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ItemListPresenter: ItemListViewToPresenterProtocol{
+class ItemListPresenter: AddItemViewToPresenterProtocol{
     var view: ItemListPresenterToViewProtocol?
     
     var interactor: ItemListPresenterToInteractorProtocol?

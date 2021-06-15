@@ -1,14 +1,14 @@
 //
-//  ViperProtocols.swift
+//  AddItemProtocols.swift
 //  Minha Lista
 //
-//  Created by Wilton Garcia on 12/06/21.
+//  Created by Wilton Garcia on 14/06/21.
 //
 
 import Foundation
 import UIKit
 
-protocol ItemViewToPresenterProtocol: AnyObject {
+protocol AddItemViewToPresenterProtocol: AnyObject {
     
     var view: ItemListPresenterToViewProtocol? {get set}
     var interactor: ItemListPresenterToInteractorProtocol? {get set}
@@ -20,28 +20,27 @@ protocol ItemViewToPresenterProtocol: AnyObject {
     
 }
 
-protocol  ItemListPresenterToViewProtocol: AnyObject {
+protocol  AddItemListPresenterToViewProtocol: AnyObject {
     func getList(itemList: ItemList)
 }
 
-protocol ItemListPresenterToRouterProtocol: AnyObject {
+protocol AddItemPresenterToRouterProtocol: AnyObject {
     
     static func createItemListViewController(itemListName: String) -> ItemListViewController
     
-    func showPopupCreateItem(navigationController: UINavigationController)
+
     
 }
 
-protocol ItemListPresenterToInteractorProtocol: AnyObject {
+protocol AddItemListPresenterToInteractorProtocol: AnyObject {
     
     var presenter: ItemListInteractorToPresenterProtocol? {get set}
     
     func getList(listName: String)
 }
 
-protocol ItemListInteractorToPresenterProtocol: AnyObject{
+protocol AddItemListInteractorToPresenterProtocol: AnyObject{
     
-    func ItemListlistLoadedWitchSucess(itemList: ItemList)
+    func ItemLoadedWitchSucess(itemList: ItemList)
     
 }
-
