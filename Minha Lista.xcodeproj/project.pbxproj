@@ -39,6 +39,7 @@
 		4D832C05265456D500752AF8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832C04265456D500752AF8 /* Item.swift */; };
 		4D832C07265456EC00752AF8 /* ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832C06265456EC00752AF8 /* ItemList.swift */; };
 		4D832C092655F0E300752AF8 /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832C082655F0E300752AF8 /* ListCellView.swift */; };
+		4D8E87752677EE33000EA864 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8E87742677EE33000EA864 /* ItemView.swift */; };
 		4D9E324C26705C760097B7C3 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E324B26705C760097B7C3 /* ItemListView.swift */; };
 		4DC4E974266195480029321F /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4E973266195480029321F /* ListRouter.swift */; };
 		4DD52D202658598A0034CDA4 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD52D1F265859890034CDA4 /* ListInteractor.swift */; };
@@ -92,6 +93,7 @@
 		4D832C04265456D500752AF8 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4D832C06265456EC00752AF8 /* ItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemList.swift; sourceTree = "<group>"; };
 		4D832C082655F0E300752AF8 /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
+		4D8E87742677EE33000EA864 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		4D9E324B26705C760097B7C3 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
 		4DC4E973266195480029321F /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 		4DD52D1F265859890034CDA4 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 		4D832BFE26544D2E00752AF8 /* VIEW */ = {
 			isa = PBXGroup;
 			children = (
+				4D8E87742677EE33000EA864 /* ItemView.swift */,
 			);
 			path = VIEW;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				4D832C07265456EC00752AF8 /* ItemList.swift in Sources */,
 				4D147CD7266D9E5300EC306A /* AddListPresenterToInteractorProtocol.swift in Sources */,
 				4D4B6FD2265EFB8B00574F81 /* AddListPopupView.swift in Sources */,
+				4D8E87752677EE33000EA864 /* ItemView.swift in Sources */,
 				4D3AAE6826765C530089CDC5 /* ListsProtocols.swift in Sources */,
 				4DD52D23265861370034CDA4 /* VirtualDataBase.swift in Sources */,
 				4D832BE82654414900752AF8 /* AppDelegate.swift in Sources */,

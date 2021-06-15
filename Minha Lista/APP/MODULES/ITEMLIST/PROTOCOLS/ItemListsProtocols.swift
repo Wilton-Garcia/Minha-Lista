@@ -28,6 +28,8 @@ protocol ItemListPresenterToRouterProtocol: AnyObject {
     
     static func createItemListViewController(itemListName: String) -> ItemListViewController
     
+    func showPopupCreateItem(navigationController: UINavigationController)
+    
 }
 
 protocol ItemListPresenterToInteractorProtocol: AnyObject {

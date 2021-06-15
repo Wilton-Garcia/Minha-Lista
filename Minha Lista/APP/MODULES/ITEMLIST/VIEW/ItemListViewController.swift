@@ -22,6 +22,23 @@ class ItemListViewController: UIViewController{
         self.view = targetView
         presentor?.startLoadItemList(listName: itemListName)
     }
+    
+    private let navigationBar: UINavigationBar = {
+        let navigationBar: UINavigationBar = UINavigationBar(frame: .zero)
+        navigationBar.barTintColor = .orange
+        navigationBar.translatesAutoresizingMaskIntoConstraints = false
+        return navigationBar
+    }()
+    
+    private func setupNavigationBar(){
+        let navigationItem = UINavigationItem()
+        navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(callPopupAddItem))
+        navigationBar.setItems([navigationItem], animated: false)
+    }
+    
+    @objc private func callPopupAddItem(){
+        router?.showPopupCreateItem(navigationController: navigationController!)
+    }
 }
 
 extension ItemListViewController: ItemListPresenterToViewProtocol{

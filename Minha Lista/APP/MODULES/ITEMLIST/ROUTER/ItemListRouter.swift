@@ -29,13 +29,9 @@ class ItemListRouter: ItemListPresenterToRouterProtocol {
         return view
     }
     
-    
-    
-    
-    func showPopupCreateList(navigationController: UINavigationController) {
-        let viewAdd = AddListRouter.createAddListModule()
+    func showPopupCreateItem(navigationController: UINavigationController) {
+        let viewAdd = AddListRouter.createAddListModule() //Chamar o add item aqui
         navigationController.present(viewAdd, animated: true, completion: nil)
     }
-    
     
 }
