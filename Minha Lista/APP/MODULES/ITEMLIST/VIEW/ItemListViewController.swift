@@ -12,7 +12,7 @@ class ItemListViewController: UIViewController{
     
     var itemListName: String!
     
-    weak var presentor: AddItemViewToPresenterProtocol?
+    weak var presentor: ItemListViewToPresenterProtocol?
     weak var router: ItemListPresenterToRouterProtocol?
     
     let targetView = ItemListView()
@@ -37,7 +37,7 @@ class ItemListViewController: UIViewController{
     }
     
     @objc private func callPopupAddItem(){
-        router?.showPopupCreateItem(navigationController: navigationController!)
+    //    router?.showPopupCreateItem(navigationController: navigationController!)
     }
 }
 

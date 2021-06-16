@@ -10,11 +10,7 @@ import UIKit
 
 class ListPresenter: ListsViewToPresenterProtocol {
   
-    
-  
-    
- 
-    
+
     var view: ListsPresenterToViewProtocol?
     
     var interactor: ListsPresenterToInteractorProtocol?

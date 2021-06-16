@@ -10,9 +10,9 @@ import UIKit
 
 protocol AddItemViewToPresenterProtocol: AnyObject {
     
-    var view: ItemListPresenterToViewProtocol? {get set}
-    var interactor: ItemListPresenterToInteractorProtocol? {get set}
-    var router: ItemListPresenterToRouterProtocol? {get set}
+    var view: AddItemPresenterToViewProtocol? {get set}
+    var interactor: AddItemPresenterToInteractorProtocol? {get set}
+    var router: AddItemPresenterToRouterProtocol? {get set}
     
     func startLoadItemList(listName: String)
     
@@ -20,26 +20,26 @@ protocol AddItemViewToPresenterProtocol: AnyObject {
     
 }
 
-protocol  AddItemListPresenterToViewProtocol: AnyObject {
+protocol  AddItemPresenterToViewProtocol: AnyObject {
     func getList(itemList: ItemList)
 }
 
 protocol AddItemPresenterToRouterProtocol: AnyObject {
     
-    static func createItemListViewController(itemListName: String) -> ItemListViewController
+    static func createAddItemViewController() -> AddItemViewController
     
 
     
 }
 
-protocol AddItemListPresenterToInteractorProtocol: AnyObject {
+protocol AddItemPresenterToInteractorProtocol: AnyObject {
     
-    var presenter: ItemListInteractorToPresenterProtocol? {get set}
+    var presenter: AddItemInteractorToPresenterProtocol? {get set}
     
     func getList(listName: String)
 }
 
-protocol AddItemListInteractorToPresenterProtocol: AnyObject{
+protocol AddItemInteractorToPresenterProtocol: AnyObject{
     
     func ItemLoadedWitchSucess(itemList: ItemList)
     
