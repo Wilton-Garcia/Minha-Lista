@@ -21,23 +21,21 @@ class ItemListViewController: UIViewController{
         super.viewDidLoad()
         self.view = targetView
         presentor?.startLoadItemList(listName: itemListName)
+        setupNavigationBar()
     }
     
-    private let navigationBar: UINavigationBar = {
-        let navigationBar: UINavigationBar = UINavigationBar(frame: .zero)
-        navigationBar.barTintColor = .orange
-        navigationBar.translatesAutoresizingMaskIntoConstraints = false
-        return navigationBar
-    }()
+  
     
     private func setupNavigationBar(){
-        let navigationItem = UINavigationItem()
-        navigationItem.rightBarButtonItem =  UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(callPopupAddItem))
-        navigationBar.setItems([navigationItem], animated: false)
+        print("Entrou")
+
+        self.navigationItem .rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(callPopupAddItem))
+
     }
     
     @objc private func callPopupAddItem(){
-    //    router?.showPopupCreateItem(navigationController: navigationController!)
+        print("Entrou")
+        router?.showPopupCreateItem(navigationController: navigationController!)
     }
 }
 
