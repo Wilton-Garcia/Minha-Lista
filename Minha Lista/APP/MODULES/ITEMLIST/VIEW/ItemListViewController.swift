@@ -35,7 +35,7 @@ class ItemListViewController: UIViewController{
     
     @objc private func callPopupAddItem(){
         print("Entrou")
-        router?.showPopupCreateItem(navigationController: navigationController!)
+        presentor?.showCreateItemViewController(navigationController: navigationController!)
     }
 }
 

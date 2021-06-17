@@ -19,8 +19,8 @@ class ItemListPresenter: ItemListViewToPresenterProtocol{
         interactor?.getList(listName: listName)
     }
     
-    func showListItemsViewController(navigationController: UINavigationController) {
-       //TODO
+    func showCreateItemViewController(navigationController: UINavigationController) {
+        router?.showPopupCreateItem(navigationController: navigationController)
     }
     
     
