@@ -22,8 +22,4 @@ class AddItemPresenter: AddItemViewToPresenterProtocol{
 }
 extension AddItemPresenter: AddItemInteractorToPresenterProtocol{
     
-    func ItemLoadedWitchSucess(itemList: ItemList) {
-        
-    }
-    
 }

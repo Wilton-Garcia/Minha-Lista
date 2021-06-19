@@ -27,7 +27,7 @@ extension AddItemViewController: AddItemPresenterToViewProtocol{
 }
 
 extension AddItemViewController: ItemViewDelegate{
-    func addItem(itemName: String) {
+    func addItem(listName: String, itemName: String) {
        // presentor?
     }
     

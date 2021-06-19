@@ -12,7 +12,7 @@ class AddItemView: UIView {
     
     public weak var delegate: ItemViewDelegate?
     
-    private var clique = 0;
+    var listName: String?
     
     //MARK: - View Properties
     
@@ -33,7 +33,7 @@ class AddItemView: UIView {
     
     private let textFieldItemtName: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Lista de ..."
+        textField.placeholder = "Nome do item..."
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -113,7 +113,7 @@ class AddItemView: UIView {
     
     @objc private func addItem(){
         if let itemName = textFieldItemtName.text{
-            delegate?.addItem(itemName: itemName)
+            delegate?.addItem(listName: listName!, itemName: itemName)
         }
     }
     
@@ -142,6 +142,6 @@ class AddItemView: UIView {
 }
 
 protocol ItemViewDelegate: AnyObject {
-    func addItem(itemName: String)
+    func addItem(listName: String, itemName: String)
     func closePopup()
 }

@@ -32,6 +32,8 @@ protocol AddItemPresenterToRouterProtocol: AnyObject {
 protocol AddItemPresenterToInteractorProtocol: AnyObject {
     
     var presenter: AddItemInteractorToPresenterProtocol? {get set}
+    
+    func AddItem(itemName: String)
 
 }
 

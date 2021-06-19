@@ -8,7 +8,12 @@
 import Foundation
 
 class AddItemInteractor:  AddItemPresenterToInteractorProtocol{
-
+  
     var presenter: AddItemInteractorToPresenterProtocol?
+    
+    func AddItem(itemName: String) {
+        let item = Item(ItemName: itemName)
+        DataBaseAcess.DataBase.insertItemInList(ListName: "", item: item)
+    }
 
 }
