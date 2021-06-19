@@ -34,6 +34,7 @@ class AddItemView: UIView {
     private let textFieldItemtName: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Nome do item..."
+        textField.backgroundColor = .orange
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -43,6 +44,7 @@ class AddItemView: UIView {
         button.setTitle("Cadastrar", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(addItem), for: .touchUpInside)
+        button.backgroundColor = .orange
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -52,6 +54,7 @@ class AddItemView: UIView {
         button.setTitle("Cancelar", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(close), for: .touchUpInside)
+        button.backgroundColor = .orange
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()

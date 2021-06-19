@@ -36,6 +36,7 @@ class AddListaPopupView: UIView{
     private let textFieldListName: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Lista de ..."
+        textField.backgroundColor = .orange
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -45,6 +46,7 @@ class AddListaPopupView: UIView{
         button.setTitle("Cadastrar", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(addList), for: .touchUpInside)
+        button.backgroundColor = .orange
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -54,6 +56,7 @@ class AddListaPopupView: UIView{
         button.setTitle("Cancelar", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(close), for: .touchUpInside)
+        button.backgroundColor = .orange
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
