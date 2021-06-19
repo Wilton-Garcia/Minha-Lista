@@ -13,7 +13,6 @@ class ItemListInteractor: ItemListPresenterToInteractorProtocol{
     func getList(listName: String) {
       let itemList = DataBaseAcess.DataBase.getItemListByName(ListName: listName)
         presenter?.ItemListlistLoadedWitchSucess(itemList: itemList)
-        NotificationCenter.default.post(name: Notification.Name("DataBaseUpdate"), object: nil)
     }
     
     

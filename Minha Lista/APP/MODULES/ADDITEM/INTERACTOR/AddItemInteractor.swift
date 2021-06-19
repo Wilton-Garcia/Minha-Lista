@@ -14,6 +14,7 @@ class AddItemInteractor:  AddItemPresenterToInteractorProtocol{
     func AddItem(listName: String, itemName: String) {
         let item = Item(ItemName: itemName)
         DataBaseAcess.DataBase.insertItemInList(ListName: listName, item: item)
+        NotificationCenter.default.post(name: Notification.Name("DataBaseUpdate"), object: nil)
     }
 
 }

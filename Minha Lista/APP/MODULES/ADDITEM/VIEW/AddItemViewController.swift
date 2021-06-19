@@ -35,6 +35,7 @@ extension AddItemViewController: AddItemPresenterToViewProtocol{
 extension AddItemViewController: ItemViewDelegate{
     func addItem(listName: String, itemName: String) {
         presentor?.addItem(listName: listName, itemName: itemName)
+        closePopup()
     }
     
     func closePopup() {
