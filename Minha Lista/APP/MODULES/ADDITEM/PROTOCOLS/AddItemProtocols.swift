@@ -14,7 +14,7 @@ protocol AddItemViewToPresenterProtocol: AnyObject {
     var interactor: AddItemPresenterToInteractorProtocol? {get set}
     var router: AddItemPresenterToRouterProtocol? {get set}
     
-    func addItem()
+    func addItem(listName: String, itemName: String)
     
 }
 
@@ -33,7 +33,7 @@ protocol AddItemPresenterToInteractorProtocol: AnyObject {
     
     var presenter: AddItemInteractorToPresenterProtocol? {get set}
     
-    func AddItem(itemName: String)
+    func AddItem(listName: String, itemName: String)
 
 }
 

@@ -11,9 +11,9 @@ class AddItemInteractor:  AddItemPresenterToInteractorProtocol{
   
     var presenter: AddItemInteractorToPresenterProtocol?
     
-    func AddItem(itemName: String) {
+    func AddItem(listName: String, itemName: String) {
         let item = Item(ItemName: itemName)
-        DataBaseAcess.DataBase.insertItemInList(ListName: "", item: item)
+        DataBaseAcess.DataBase.insertItemInList(ListName: listName, item: item)
     }
 
 }

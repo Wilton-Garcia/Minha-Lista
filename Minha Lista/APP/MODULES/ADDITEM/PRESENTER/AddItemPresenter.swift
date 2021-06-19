@@ -9,15 +9,16 @@ import Foundation
 import UIKit
 
 class AddItemPresenter: AddItemViewToPresenterProtocol{
-    func addItem() {
-        //TODO
-    }
     
     var view: AddItemPresenterToViewProtocol?
     
     var interactor: AddItemPresenterToInteractorProtocol?
     
     var router: AddItemPresenterToRouterProtocol?
+    
+    func addItem(listName: String, itemName: String) {
+        interactor?.AddItem(listName: listName, itemName: itemName)
+    }
     
 }
 extension AddItemPresenter: AddItemInteractorToPresenterProtocol{
