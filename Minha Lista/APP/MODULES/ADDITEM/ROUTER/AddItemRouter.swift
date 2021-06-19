@@ -11,17 +11,13 @@ import UIKit
 class AddItemRouter: AddItemPresenterToRouterProtocol{
     
     static func createAddItemViewController() -> AddItemViewController  {
+        
         let view = AddItemViewController()
-        
         let presenter: AddItemViewToPresenterProtocol & AddItemInteractorToPresenterProtocol = AddItemPresenter()
-        
         let interactor: AddItemPresenterToInteractorProtocol = AddItemInteractor()
-        
         let router: AddItemPresenterToRouterProtocol = AddItemRouter()
-        
     
         view.presentor = presenter
-        
         presenter.view = view
         presenter.router = router
         presenter.interactor = interactor
@@ -29,6 +25,5 @@ class AddItemRouter: AddItemPresenterToRouterProtocol{
         
         return view
     }
-    
     
 }

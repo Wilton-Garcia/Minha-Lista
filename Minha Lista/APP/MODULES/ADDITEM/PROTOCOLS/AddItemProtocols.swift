@@ -16,33 +16,25 @@ protocol AddItemViewToPresenterProtocol: AnyObject {
     
     func addItem()
     
-    func startLoadItemList(listName: String)
-    
-    func showListItemsViewController(navigationController: UINavigationController)
-    
 }
 
 protocol  AddItemPresenterToViewProtocol: AnyObject {
+    
     func getList(itemList: ItemList)
+    
 }
 
 protocol AddItemPresenterToRouterProtocol: AnyObject {
     
     static func createAddItemViewController() -> AddItemViewController
-    
-
-    
 }
 
 protocol AddItemPresenterToInteractorProtocol: AnyObject {
     
     var presenter: AddItemInteractorToPresenterProtocol? {get set}
-    
-    func getList(listName: String)
+
 }
 
 protocol AddItemInteractorToPresenterProtocol: AnyObject{
-    
-    func ItemLoadedWitchSucess(itemList: ItemList)
     
 }

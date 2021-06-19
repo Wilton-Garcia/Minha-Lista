@@ -19,21 +19,11 @@ class AddItemPresenter: AddItemViewToPresenterProtocol{
     
     var router: AddItemPresenterToRouterProtocol?
     
-    
-    func startLoadItemList(listName: String) {
-            
-    }
-    
-    func showListItemsViewController(navigationController: UINavigationController) {
-            
-    }
-    
-    
 }
 extension AddItemPresenter: AddItemInteractorToPresenterProtocol{
+    
     func ItemLoadedWitchSucess(itemList: ItemList) {
         
     }
-    
     
 }

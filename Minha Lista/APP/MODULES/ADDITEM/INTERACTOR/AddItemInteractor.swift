@@ -8,9 +8,7 @@
 import Foundation
 
 class AddItemInteractor:  AddItemPresenterToInteractorProtocol{
+
     var presenter: AddItemInteractorToPresenterProtocol?
-    
-    func getList(listName: String) {
-        
-    }
+
 }
