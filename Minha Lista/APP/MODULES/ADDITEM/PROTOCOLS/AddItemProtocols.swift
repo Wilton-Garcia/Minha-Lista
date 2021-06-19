@@ -14,6 +14,8 @@ protocol AddItemViewToPresenterProtocol: AnyObject {
     var interactor: AddItemPresenterToInteractorProtocol? {get set}
     var router: AddItemPresenterToRouterProtocol? {get set}
     
+    func addItem()
+    
     func startLoadItemList(listName: String)
     
     func showListItemsViewController(navigationController: UINavigationController)

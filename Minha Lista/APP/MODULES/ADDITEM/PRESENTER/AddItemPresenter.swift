@@ -9,6 +9,10 @@ import Foundation
 import UIKit
 
 class AddItemPresenter: AddItemViewToPresenterProtocol{
+    func addItem() {
+        //TODO
+    }
+    
     var view: AddItemPresenterToViewProtocol?
     
     var interactor: AddItemPresenterToInteractorProtocol?

@@ -10,7 +10,7 @@ import UIKit
 class AddItemView: UIView {
     //MARK: - Private properties
     
-    public weak var delegate: AddListViewDelegate?
+    public weak var delegate: ItemViewDelegate?
     
     private var clique = 0;
     
@@ -42,7 +42,7 @@ class AddItemView: UIView {
         let button = UIButton()
         button.setTitle("Cadastrar", for: .normal)
         button.setTitleColor(.black, for: .normal)
-        button.addTarget(self, action: #selector(addList), for: .touchUpInside)
+        button.addTarget(self, action: #selector(addItem), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -111,9 +111,9 @@ class AddItemView: UIView {
         delegate?.closePopup()
     }
     
-    @objc private func addList(){
-        if let listName = textFieldItemtName.text{
-            delegate?.addList(listName: listName)
+    @objc private func addItem(){
+        if let itemName = textFieldItemtName.text{
+            delegate?.addItem(itemName: itemName)
         }
     }
     
@@ -139,4 +139,9 @@ class AddItemView: UIView {
         delegate?.closePopup()
         
     }
+}
+
+protocol ItemViewDelegate: AnyObject {
+    func addItem(itemName: String)
+    func closePopup()
 }

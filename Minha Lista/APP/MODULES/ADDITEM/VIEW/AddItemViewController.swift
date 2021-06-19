@@ -25,3 +25,15 @@ extension AddItemViewController: AddItemPresenterToViewProtocol{
     
     
 }
+
+extension AddItemViewController: ItemViewDelegate{
+    func addItem(itemName: String) {
+       // presentor?
+    }
+    
+    func closePopup() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+}
