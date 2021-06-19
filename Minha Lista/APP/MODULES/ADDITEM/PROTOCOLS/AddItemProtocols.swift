@@ -26,7 +26,7 @@ protocol  AddItemPresenterToViewProtocol: AnyObject {
 
 protocol AddItemPresenterToRouterProtocol: AnyObject {
     
-    static func createAddItemViewController() -> AddItemViewController
+    static func createAddItemViewController(listName: String) -> AddItemViewController
 }
 
 protocol AddItemPresenterToInteractorProtocol: AnyObject {

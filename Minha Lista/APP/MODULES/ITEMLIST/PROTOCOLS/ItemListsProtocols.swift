@@ -16,7 +16,7 @@ protocol ItemListViewToPresenterProtocol: AnyObject {
     
     func startLoadItemList(listName: String)
     
-    func showCreateItemViewController(navigationController: UINavigationController)
+    func showCreateItemViewController(navigationController: UINavigationController, itemListName: String)
     
 }
 
@@ -28,7 +28,7 @@ protocol ItemListPresenterToRouterProtocol: AnyObject {
     
     static func createItemListViewController(itemListName: String) -> ItemListViewController
     
-    func showPopupCreateItem(navigationController: UINavigationController)
+    func showPopupCreateItem(navigationController: UINavigationController, itemListName: String)
     
 }
 

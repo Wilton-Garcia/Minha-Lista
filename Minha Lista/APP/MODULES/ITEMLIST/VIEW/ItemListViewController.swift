@@ -19,29 +19,37 @@ class ItemListViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        targetView.delegate = self
         self.view = targetView
         presentor?.startLoadItemList(listName: itemListName)
         setupNavigationBar()
     }
     
-  
-    
     private func setupNavigationBar(){
-        print("Entrou")
 
         self.navigationItem .rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(callPopupAddItem))
 
     }
     
     @objc private func callPopupAddItem(){
-        print("Entrou")
-        presentor?.showCreateItemViewController(navigationController: navigationController!)
+        
+        presentor?.showCreateItemViewController(navigationController: navigationController!, itemListName: itemListName)
     }
+    
 }
 
 extension ItemListViewController: ItemListPresenterToViewProtocol{
+   
     func getList(itemList: ItemList) {
         targetView.data = itemList
     }
+    
 }
 
+extension ItemListViewController: ItemListViewDelegate{
+    
+    func loadData() {
+        
+    }
+    
+}

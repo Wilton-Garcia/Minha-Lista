@@ -29,8 +29,8 @@ class ItemListRouter: ItemListPresenterToRouterProtocol {
         return view
     }
     
-    func showPopupCreateItem(navigationController: UINavigationController) {
-        let viewAdd = AddItemRouter.createAddItemViewController()
+    func showPopupCreateItem(navigationController: UINavigationController, itemListName: String) {
+        let viewAdd = AddItemRouter.createAddItemViewController(listName: itemListName)
         navigationController.present(viewAdd, animated: true, completion: nil)
     }
     

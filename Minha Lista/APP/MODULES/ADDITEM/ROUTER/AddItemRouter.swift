@@ -10,13 +10,14 @@ import UIKit
 
 class AddItemRouter: AddItemPresenterToRouterProtocol{
     
-    static func createAddItemViewController() -> AddItemViewController  {
+    static func createAddItemViewController(listName: String) -> AddItemViewController  {
         
         let view = AddItemViewController()
         let presenter: AddItemViewToPresenterProtocol & AddItemInteractorToPresenterProtocol = AddItemPresenter()
         let interactor: AddItemPresenterToInteractorProtocol = AddItemInteractor()
         let router: AddItemPresenterToRouterProtocol = AddItemRouter()
     
+        view.listName = listName
         view.presentor = presenter
         presenter.view = view
         presenter.router = router

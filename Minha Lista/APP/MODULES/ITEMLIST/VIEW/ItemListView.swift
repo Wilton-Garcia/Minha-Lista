@@ -10,6 +10,8 @@ import UIKit
 class ItemListView: UIView {
 
     var data: ItemList!
+    weak var delegate: ItemListViewDelegate?
+    
     
     private let listNameUiLabel: UILabel = {
        let label = UILabel()
@@ -50,12 +52,18 @@ class ItemListView: UIView {
         ])
     }
     
+    @objc private func reloadTable(notification: Notification){
+        delegate?.loadData()
+        itemListTableView.reloadData()
+    }
+    
     convenience init() {
             self.init(frame:.zero)
             setupView()
         itemListTableView.delegate = self
         itemListTableView.dataSource = self
         backgroundColor = .orange
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadTable(notification:)), name: Notification.Name("DataBaseUpdate"), object: nil)
     }
 }
 

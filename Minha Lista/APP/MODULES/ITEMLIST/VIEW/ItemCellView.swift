@@ -56,16 +56,6 @@ class ItemCellView: UITableViewCell {
             labelItemName.leadingAnchor.constraint(equalTo: viewCellContent.leadingAnchor, constant: 10)
         ])
     }
-//    private func setuplabelListItensCount(){
-//
-//        viewCellContent.addSubview(labelListItensCount)
-//
-//        NSLayoutConstraint.activate([
-//            labelListItensCount.trailingAnchor.constraint(equalTo: viewCellContent.trailingAnchor, constant: -10),
-//            labelListItensCount.leadingAnchor.constraint(equalTo: viewCellContent.leadingAnchor, constant: 10),
-//            labelListItensCount.bottomAnchor.constraint(equalTo: viewCellContent.bottomAnchor, constant: -10)
-//        ])
-//    }
     
     //MARK: - Public Methods
     
@@ -80,8 +70,7 @@ class ItemCellView: UITableViewCell {
   
         setpupViewCellContent()
         setupLabelListName()
-       // setuplabelListItensCount()
-        
+
         self.backgroundColor = .clear
     }
     
@@ -92,6 +81,5 @@ class ItemCellView: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 
 }

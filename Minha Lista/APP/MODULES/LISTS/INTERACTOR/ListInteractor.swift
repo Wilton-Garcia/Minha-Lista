@@ -40,14 +40,14 @@ class ListInteractor: ListsPresenterToInteractorProtocol {
     }
     
     public func getLists(){
-        createList(listName: "Supermercado")
-        createList(listName: "Sacolão")
-        let myItem = Item(ItemName: "Pacote de Arroz")
-        let myItem2 = Item(ItemName: "Pacote de Feijão")
-        let myItem3 = Item(ItemName: "Maracujá")
-        DataBaseAcess.DataBase.insertItemInList(ListName: "Supermercado", item: myItem)
-        DataBaseAcess.DataBase.insertItemInList(ListName: "Supermercado", item: myItem2)
-        DataBaseAcess.DataBase.insertItemInList(ListName: "Sacolão", item: myItem3)
+//        createList(listName: "Supermercado")
+//        createList(listName: "Sacolão")
+//        let myItem = Item(ItemName: "Pacote de Arroz")
+//        let myItem2 = Item(ItemName: "Pacote de Feijão")
+//        let myItem3 = Item(ItemName: "Maracujá")
+//        DataBaseAcess.DataBase.insertItemInList(ListName: "Supermercado", item: myItem)
+//        DataBaseAcess.DataBase.insertItemInList(ListName: "Supermercado", item: myItem2)
+//        DataBaseAcess.DataBase.insertItemInList(ListName: "Sacolão", item: myItem3)
         let lists = DataBaseAcess.DataBase.getAllItemList()
         self.presenter?.listLoadedWitchSucess(itemList: lists)
     }
