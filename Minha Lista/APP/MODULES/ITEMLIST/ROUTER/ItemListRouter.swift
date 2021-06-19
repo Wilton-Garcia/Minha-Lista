@@ -30,7 +30,7 @@ class ItemListRouter: ItemListPresenterToRouterProtocol {
     }
     
     func showPopupCreateItem(navigationController: UINavigationController) {
-        let viewAdd = AddListRouter.createAddListModule() //Chamar o add item aqui
+        let viewAdd = AddItemRouter.createAddItemViewController()
         navigationController.present(viewAdd, animated: true, completion: nil)
     }
     
