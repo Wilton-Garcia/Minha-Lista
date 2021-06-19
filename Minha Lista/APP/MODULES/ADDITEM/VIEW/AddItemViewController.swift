@@ -12,9 +12,12 @@ class AddItemViewController: UIViewController {
     weak var presentor: AddItemViewToPresenterProtocol?
     weak var router: AddItemPresenterToRouterProtocol?
     
+    let targetView =  AddItemView()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.view = targetView
         // Do any additional setup after loading the view.
     }
 }
