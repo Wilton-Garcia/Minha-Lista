@@ -30,8 +30,12 @@ class ItemList : NSObject{
         return item
     }
     
-    public func getCountItens() -> Int{
+    public func getCountTotalItens() -> Int{
         return ItemList.count
+    }
+    
+    public func getCountTotalIntensChecked() -> Int{
+        return ItemList.filter({$0.getItemCheck() == true}).count
     }
     
     init(ListName: String) {

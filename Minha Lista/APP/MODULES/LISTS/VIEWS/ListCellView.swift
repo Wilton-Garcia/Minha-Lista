@@ -72,6 +72,7 @@ class  ListCellView: UITableViewCell {
     
     public func fillCell(itemList: ItemList){
         labelListName.text = itemList.getListName()
+        labelListItensCount.text = "\(itemList.getCountTotalIntensChecked())/\(itemList.getCountTotalItens())"
       
     }
     
