@@ -27,7 +27,7 @@ class  ListCellView: UITableViewCell {
     
     private let labelListItensCount: UILabel = {
         let labelListItensCount = UILabel()
-        labelListItensCount.text = "04/10"
+        labelListItensCount.text = "0/0"
         labelListItensCount.translatesAutoresizingMaskIntoConstraints = false
         return labelListItensCount
     }()
@@ -72,6 +72,7 @@ class  ListCellView: UITableViewCell {
     
     public func fillCell(itemList: ItemList){
         labelListName.text = itemList.getListName()
+      
     }
     
     //MARK: - Init

@@ -30,6 +30,10 @@ class ItemList : NSObject{
         return item
     }
     
+    public func getCountItens() -> Int{
+        return ItemList.count
+    }
+    
     init(ListName: String) {
         self.ListName = ListName
     }

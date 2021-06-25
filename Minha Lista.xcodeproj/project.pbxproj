@@ -34,7 +34,6 @@
 		4D767CCA265AD7B6000661FC /* ListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D767CC9265AD7B6000661FC /* ListInteractorTest.swift */; };
 		4D767CD2265AD7D8000661FC /* VirtualDataBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D767CD1265AD7D8000661FC /* VirtualDataBaseTest.swift */; };
 		4D832BE82654414900752AF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832BE72654414900752AF8 /* AppDelegate.swift */; };
-		4D832BEC2654414900752AF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832BEB2654414900752AF8 /* ViewController.swift */; };
 		4D832BF12654414C00752AF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D832BF02654414C00752AF8 /* Assets.xcassets */; };
 		4D832BF42654414C00752AF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D832BF22654414C00752AF8 /* LaunchScreen.storyboard */; };
 		4D832C0026544D4F00752AF8 /* MyListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D832BFF26544D4F00752AF8 /* MyListsViewController.swift */; };
@@ -94,7 +93,6 @@
 		4D767CD1265AD7D8000661FC /* VirtualDataBaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualDataBaseTest.swift; sourceTree = "<group>"; };
 		4D832BE42654414900752AF8 /* Minha Lista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Minha Lista.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D832BE72654414900752AF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D832BEB2654414900752AF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D832BF02654414C00752AF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D832BF32654414C00752AF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D832BF52654414C00752AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -263,10 +261,9 @@
 		4D832BE62654414900752AF8 /* Minha Lista */ = {
 			isa = PBXGroup;
 			children = (
+				4D8D6FA4267E814100E3B306 /* APP-SETINGS */,
 				4DD52D2126585FDF0034CDA4 /* DATA */,
 				4D832BFB265444D200752AF8 /* APP */,
-				4D832BE72654414900752AF8 /* AppDelegate.swift */,
-				4D832BEB2654414900752AF8 /* ViewController.swift */,
 				4D832BF02654414C00752AF8 /* Assets.xcassets */,
 				4D832BF22654414C00752AF8 /* LaunchScreen.storyboard */,
 				4D832BF52654414C00752AF8 /* Info.plist */,
@@ -318,6 +315,14 @@
 				4D832C04265456D500752AF8 /* Item.swift */,
 			);
 			path = ENTITY;
+			sourceTree = "<group>";
+		};
+		4D8D6FA4267E814100E3B306 /* APP-SETINGS */ = {
+			isa = PBXGroup;
+			children = (
+				4D832BE72654414900752AF8 /* AppDelegate.swift */,
+			);
+			path = "APP-SETINGS";
 			sourceTree = "<group>";
 		};
 		4D8E877626784059000EA864 /* ADDITEM */ = {
@@ -590,7 +595,6 @@
 				4D832C0226544D8400752AF8 /* MyListsView.swift in Sources */,
 				4D8E877E267841F3000EA864 /* AddItemProtocols.swift in Sources */,
 				4D215FBE2679995C00106BDD /* AddItemPresenter.swift in Sources */,
-				4D832BEC2654414900752AF8 /* ViewController.swift in Sources */,
 				4D6BA9A32665201900F65B50 /* ListViewDelegate.swift in Sources */,
 				4D147CD5266D9E1200EC306A /* AddListPresenterToRouterProtocol.swift in Sources */,
 				4D147CDF266DA1CB00EC306A /* AddListRouter.swift in Sources */,
