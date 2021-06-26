@@ -18,10 +18,14 @@ protocol ItemListViewToPresenterProtocol: AnyObject {
     
     func showCreateItemViewController(navigationController: UINavigationController, itemListName: String)
     
+    func checkItem(listName: String, itemName: String)
+    
 }
 
 protocol  ItemListPresenterToViewProtocol: AnyObject {
+   
     func getList(itemList: ItemList)
+    
 }
 
 protocol ItemListPresenterToRouterProtocol: AnyObject {
@@ -37,6 +41,8 @@ protocol ItemListPresenterToInteractorProtocol: AnyObject {
     var presenter: ItemListInteractorToPresenterProtocol? {get set}
     
     func getList(listName: String)
+    
+    func checkItem(listName: String, itemName: String)
 }
 
 protocol ItemListInteractorToPresenterProtocol: AnyObject{

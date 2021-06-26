@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class ItemListPresenter: ItemListViewToPresenterProtocol{
+    
     var view: ItemListPresenterToViewProtocol?
     
     var interactor: ItemListPresenterToInteractorProtocol?
@@ -21,6 +22,10 @@ class ItemListPresenter: ItemListViewToPresenterProtocol{
     
     func showCreateItemViewController(navigationController: UINavigationController, itemListName: String) {
         router?.showPopupCreateItem(navigationController: navigationController, itemListName: itemListName)
+    }
+    
+    func checkItem(listName: String, itemName: String) {
+        interactor?.checkItem(listName: listName, itemName: itemName)
     }
     
     

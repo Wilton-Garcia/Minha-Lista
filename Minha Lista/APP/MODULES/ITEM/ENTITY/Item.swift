@@ -24,6 +24,6 @@ class Item{
     
     init(ItemName: String) {
         self.ItemName = ItemName
-        ItemCheck = true
+        ItemCheck = false
     }
 }

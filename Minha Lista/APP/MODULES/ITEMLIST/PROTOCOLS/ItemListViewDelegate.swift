@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ItemListViewDelegate: AnyObject {
-    func loadData()
+    func checkItem(itemName: String)
 }

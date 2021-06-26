@@ -39,7 +39,7 @@ class ItemListViewController: UIViewController{
 }
 
 extension ItemListViewController: ItemListPresenterToViewProtocol{
-   
+
     func getList(itemList: ItemList) {
         targetView.data = itemList
     }
@@ -48,8 +48,8 @@ extension ItemListViewController: ItemListPresenterToViewProtocol{
 
 extension ItemListViewController: ItemListViewDelegate{
     
-    func loadData() {
-        
+    func checkItem(itemName: String) {
+        presentor?.checkItem(listName: itemListName, itemName: itemName)
     }
     
 }

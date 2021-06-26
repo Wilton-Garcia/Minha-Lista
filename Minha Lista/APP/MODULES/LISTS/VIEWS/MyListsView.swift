@@ -16,7 +16,7 @@ class MyListsView : UIView{
     
     private let tableViewMyLists: UITableView = {
         let myLists = UITableView()
-        myLists.backgroundColor = .clear
+        myLists.backgroundColor = .orange
         myLists.translatesAutoresizingMaskIntoConstraints = false
         return myLists
     }()

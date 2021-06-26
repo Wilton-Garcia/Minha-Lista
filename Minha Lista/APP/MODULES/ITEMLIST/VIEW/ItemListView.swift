@@ -55,8 +55,9 @@ class ItemListView: UIView {
     }
     
     @objc private func reloadTable(notification: Notification){
-        delegate?.loadData()
+        
         itemListTableView.reloadData()
+        
     }
     
     convenience init() {
@@ -66,6 +67,7 @@ class ItemListView: UIView {
         itemListTableView.dataSource = self
         backgroundColor = .orange
         NotificationCenter.default.addObserver(self, selector: #selector(self.reloadTable(notification:)), name: Notification.Name("DataBaseUpdate"), object: nil)
+      //  listNameUiLabel.text = data.getListName()
     }
 }
 
@@ -83,7 +85,7 @@ extension ItemListView: UITableViewDataSource{
         let cell = itemListTableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! ItemCellView
         let data = data.getList()
         let item = data[indexPath.row]
-        cell.fillCell(item: item)
+        cell.fillCell(item: item, itemListViewDelegate: delegate!)
         return cell
     }
 }

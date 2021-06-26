@@ -10,6 +10,10 @@ import UIKit
 class ItemCellView: UITableViewCell {
     //MARK: - Private properties
     
+    public var delegate: ItemListViewDelegate?
+    
+    private var item: Item?
+    
     private let viewCellContent: UIView = {
        let uiView = UIView()
         uiView.backgroundColor = .systemGray6
@@ -27,7 +31,7 @@ class ItemCellView: UITableViewCell {
     
     private let switchItemDone: UISwitch = {
        let uiSwitch = UISwitch()
-        uiSwitch.setOn(true, animated: true)
+        uiSwitch.addTarget(self, action: #selector(checkItem), for: .valueChanged)
         uiSwitch.translatesAutoresizingMaskIntoConstraints = false
         return uiSwitch
     }()
@@ -66,10 +70,18 @@ class ItemCellView: UITableViewCell {
         ])
     }
     
+    @objc private func checkItem(){
+        print("Hello World")
+        delegate?.checkItem(itemName: item!.getItemName())
+    }
+    
     //MARK: - Public Methods
     
-    public func fillCell(item: Item){
+    public func fillCell(item: Item, itemListViewDelegate: ItemListViewDelegate?){
+        self.item = item
+        delegate = itemListViewDelegate
         labelItemName.text = item.getItemName()
+        switchItemDone.isOn = item.getItemCheck()
     }
     
     //MARK: - Init
@@ -77,12 +89,12 @@ class ItemCellView: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: "itemCell")
         
-     
+        self.contentView.isUserInteractionEnabled = false
         setpupViewCellContent()
         setupSwitchItemDone()
         setupLabelListName()
 
-        self.contentView.isUserInteractionEnabled = false
+       
         
         self.backgroundColor = .orange
     }

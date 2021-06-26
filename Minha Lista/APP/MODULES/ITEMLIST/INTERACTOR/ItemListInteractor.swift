@@ -8,6 +8,11 @@
 import Foundation
 
 class ItemListInteractor: ItemListPresenterToInteractorProtocol{
+    func checkItem(listName: String, itemName: String) {
+        DataBaseAcess.DataBase.checkItemInList(ListName: listName, ItemName: itemName)
+        NotificationCenter.default.post(name: Notification.Name("DataBaseUpdate"), object: nil)
+    }
+    
     var presenter: ItemListInteractorToPresenterProtocol?
     
     func getList(listName: String) {
