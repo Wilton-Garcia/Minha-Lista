@@ -20,12 +20,14 @@ class ItemCellView: UITableViewCell {
     
     private let labelItemName: UILabel = {
         let labelListName = UILabel()
+        labelListName.backgroundColor = .blue
         labelListName.translatesAutoresizingMaskIntoConstraints = false
         return labelListName
     }()
     
     private let switchItemDone: UISwitch = {
        let uiSwitch = UISwitch()
+        uiSwitch.setOn(true, animated: true)
         uiSwitch.translatesAutoresizingMaskIntoConstraints = false
         return uiSwitch
     }()
@@ -50,7 +52,7 @@ class ItemCellView: UITableViewCell {
         
         NSLayoutConstraint.activate([
             labelItemName.topAnchor.constraint(equalTo: viewCellContent.topAnchor, constant: 10),
-            labelItemName.trailingAnchor.constraint(equalTo: switchItemDone.trailingAnchor, constant: -10),
+            labelItemName.trailingAnchor.constraint(equalTo: switchItemDone.leadingAnchor, constant: -10),
             labelItemName.leadingAnchor.constraint(equalTo: viewCellContent.leadingAnchor, constant: 10)
         ])
     }
@@ -74,11 +76,14 @@ class ItemCellView: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: "itemCell")
-  
+        
+     
         setpupViewCellContent()
         setupSwitchItemDone()
         setupLabelListName()
 
+        self.contentView.isUserInteractionEnabled = false
+        
         self.backgroundColor = .orange
     }
     
