@@ -22,6 +22,8 @@ class ItemListView: UIView {
     
     private let itemListTableView: UITableView = {
        let tableView = UITableView()
+        tableView.allowsSelection = false
+        tableView.backgroundColor = .white
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()

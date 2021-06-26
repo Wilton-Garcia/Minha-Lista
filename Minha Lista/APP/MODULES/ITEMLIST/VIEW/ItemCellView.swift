@@ -24,13 +24,11 @@ class ItemCellView: UITableViewCell {
         return labelListName
     }()
     
-    private let labelListItensCount: UILabel = {
-        let labelListItensCount = UILabel()
-        labelListItensCount.text = "04/10"
-        labelListItensCount.translatesAutoresizingMaskIntoConstraints = false
-        return labelListItensCount
+    private let switchItemDone: UISwitch = {
+       let uiSwitch = UISwitch()
+        uiSwitch.translatesAutoresizingMaskIntoConstraints = false
+        return uiSwitch
     }()
-    
     //MARK: - Private methods
     
     private func setpupViewCellContent(){
@@ -39,7 +37,7 @@ class ItemCellView: UITableViewCell {
         
         NSLayoutConstraint.activate([
             viewCellContent.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            viewCellContent.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            viewCellContent.trailingAnchor.constraint(equalTo:  trailingAnchor, constant: -10),
             viewCellContent.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             viewCellContent.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
@@ -52,8 +50,17 @@ class ItemCellView: UITableViewCell {
         
         NSLayoutConstraint.activate([
             labelItemName.topAnchor.constraint(equalTo: viewCellContent.topAnchor, constant: 10),
-            labelItemName.trailingAnchor.constraint(equalTo: viewCellContent.trailingAnchor, constant: -10),
+            labelItemName.trailingAnchor.constraint(equalTo: switchItemDone.trailingAnchor, constant: -10),
             labelItemName.leadingAnchor.constraint(equalTo: viewCellContent.leadingAnchor, constant: 10)
+        ])
+    }
+    
+    private func setupSwitchItemDone(){
+        viewCellContent.addSubview(switchItemDone)
+        
+        NSLayoutConstraint.activate([
+            switchItemDone.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            switchItemDone.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])
     }
     
@@ -69,9 +76,10 @@ class ItemCellView: UITableViewCell {
         super.init(style: style, reuseIdentifier: "itemCell")
   
         setpupViewCellContent()
+        setupSwitchItemDone()
         setupLabelListName()
 
-        self.backgroundColor = .clear
+        self.backgroundColor = .orange
     }
     
     override func layoutSubviews() {
