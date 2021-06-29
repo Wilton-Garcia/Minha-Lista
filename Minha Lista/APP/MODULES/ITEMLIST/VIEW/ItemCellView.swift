@@ -29,9 +29,19 @@ class ItemCellView: UITableViewCell {
         return labelListName
     }()
     
+    private let buttonDimiss: UIButton = {
+        let button = UIButton()
+        button.setTitle("check", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(checkItem), for: .touchUpInside)
+        button.backgroundColor = .orange
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     private let switchItemDone: UISwitch = {
        let uiSwitch = UISwitch()
-        uiSwitch.addTarget(self, action: #selector(checkItem), for: .valueChanged)
+        uiSwitch.addTarget(self, action: #selector(checkItem), for: .allTouchEvents)
         uiSwitch.translatesAutoresizingMaskIntoConstraints = false
         return uiSwitch
     }()
@@ -39,10 +49,10 @@ class ItemCellView: UITableViewCell {
     
     private func setpupViewCellContent(){
         
-        self.addSubview(viewCellContent)
+        self.contentView.addSubview(viewCellContent)
         
         NSLayoutConstraint.activate([
-            viewCellContent.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            topAnchor.constraint(equalTo: topAnchor, constant: 10),
             viewCellContent.trailingAnchor.constraint(equalTo:  trailingAnchor, constant: -10),
             viewCellContent.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             viewCellContent.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
@@ -52,27 +62,27 @@ class ItemCellView: UITableViewCell {
     
     private func setupLabelListName(){
         
-        viewCellContent.addSubview(labelItemName)
+        self.contentView.addSubview(labelItemName)
         
         NSLayoutConstraint.activate([
-            labelItemName.topAnchor.constraint(equalTo: viewCellContent.topAnchor, constant: 10),
-            labelItemName.trailingAnchor.constraint(equalTo: switchItemDone.leadingAnchor, constant: -10),
-            labelItemName.leadingAnchor.constraint(equalTo: viewCellContent.leadingAnchor, constant: 10)
+            labelItemName.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            labelItemName.trailingAnchor.constraint(equalTo: buttonDimiss.leadingAnchor, constant: -10),
+            labelItemName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10)
         ])
     }
     
     private func setupSwitchItemDone(){
-        viewCellContent.addSubview(switchItemDone)
+        self.contentView.addSubview(buttonDimiss)
         
         NSLayoutConstraint.activate([
-            switchItemDone.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            switchItemDone.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
+            buttonDimiss.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            buttonDimiss.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])
     }
     
     @objc private func checkItem(){
         print("Hello World")
-        delegate?.checkItem(itemName: item!.getItemName())
+       // delegate?.checkItem(itemName: item!.getItemName())
     }
     
     //MARK: - Public Methods
@@ -89,13 +99,14 @@ class ItemCellView: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: "itemCell")
         
-        self.contentView.isUserInteractionEnabled = false
-        setpupViewCellContent()
+      
+//        setpupViewCellContent()
         setupSwitchItemDone()
         setupLabelListName()
+        
+        self.contentView.backgroundColor = .gray
 
        
-        
         self.backgroundColor = .orange
     }
     

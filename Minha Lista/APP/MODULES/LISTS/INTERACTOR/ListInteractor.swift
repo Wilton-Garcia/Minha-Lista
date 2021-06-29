@@ -32,6 +32,7 @@ class ListInteractor: ListsPresenterToInteractorProtocol {
     }
     
     public func getListsCount() -> Int{
+        
         return DataBaseAcess.DataBase.getItemListCout()
     }
     

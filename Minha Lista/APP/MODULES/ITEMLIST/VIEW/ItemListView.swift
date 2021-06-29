@@ -85,7 +85,8 @@ extension ItemListView: UITableViewDataSource{
         let cell = itemListTableView.dequeueReusableCell(withIdentifier: "itemCell", for: indexPath) as! ItemCellView
         let data = data.getList()
         let item = data[indexPath.row]
-        cell.fillCell(item: item, itemListViewDelegate: delegate!)
+        cell.fillCell(item: item, itemListViewDelegate: delegate)
+        cell.isUserInteractionEnabled = false
         return cell
     }
 }

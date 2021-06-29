@@ -12,17 +12,21 @@ class  ListCellView: UITableViewCell {
     //MARK: - Private properties
     
     private let viewCellContent: UIView = {
+        
        let uiView = UIView()
         uiView.backgroundColor = .systemGray6
         uiView.translatesAutoresizingMaskIntoConstraints = false
         uiView.layer.cornerRadius = 10
        return uiView
+        
     }()
     
     private let labelListName: UILabel = {
+        
         let labelListName = UILabel()
         labelListName.translatesAutoresizingMaskIntoConstraints = false
         return labelListName
+        
     }()
     
     private let labelListItensCount: UILabel = {
@@ -71,6 +75,7 @@ class  ListCellView: UITableViewCell {
     //MARK: - Public Methods
     
     public func fillCell(itemList: ItemList){
+        
         labelListName.text = itemList.getListName()
         labelListItensCount.text = "\(itemList.getCountTotalIntensChecked())/\(itemList.getCountTotalItens())"
       

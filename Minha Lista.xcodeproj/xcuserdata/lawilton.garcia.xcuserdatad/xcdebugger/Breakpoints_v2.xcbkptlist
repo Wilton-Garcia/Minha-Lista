@@ -39,16 +39,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8F20AAF2-23A2-4640-98AB-6541676E36FB"
+            uuid = "D9C3AB7C-479D-4E0E-A23A-9F365FB4CF57"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Minha Lista/APP/MODULES/ITEMLIST/VIEW/ItemCellView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "checkItem(_:)"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "checkItem()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
