@@ -67,8 +67,9 @@ class ItemListView: UIView {
         itemListTableView.dataSource = self
         backgroundColor = .orange
         NotificationCenter.default.addObserver(self, selector: #selector(self.reloadTable(notification:)), name: Notification.Name("DataBaseUpdate"), object: nil)
-      //  listNameUiLabel.text = data.getListName()
     }
+    
+    
 }
 
 extension ItemListView: UITableViewDelegate{
