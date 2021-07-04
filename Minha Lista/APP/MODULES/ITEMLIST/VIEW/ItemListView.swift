@@ -22,7 +22,7 @@ class ItemListView: UIView {
     
     private let itemListTableView: UITableView = {
        let tableView = UITableView()
-       // tableView.allowsSelection = false
+        tableView.allowsSelection = true
         tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
@@ -87,12 +87,9 @@ extension ItemListView: UITableViewDataSource{
         let data = data.getList()
         let item = data[indexPath.row]
         cell.fillCell(item: item, itemListViewDelegate: delegate)
-        cell.isUserInteractionEnabled = false
+        cell.isUserInteractionEnabled = true
         itemListTableView.separatorStyle = .none
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Hello")
-    }
 }

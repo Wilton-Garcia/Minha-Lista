@@ -49,7 +49,7 @@ class ItemCellView: UITableViewCell {
     
     private func setpupViewCellContent(){
         
-        self.addSubview(viewCellContent)
+        self.contentView.addSubview(viewCellContent)
         
         NSLayoutConstraint.activate([
             viewCellContent.topAnchor.constraint(equalTo: topAnchor, constant: 10),
