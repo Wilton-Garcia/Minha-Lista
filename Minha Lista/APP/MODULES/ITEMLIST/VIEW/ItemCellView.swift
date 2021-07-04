@@ -49,10 +49,10 @@ class ItemCellView: UITableViewCell {
     
     private func setpupViewCellContent(){
         
-        self.contentView.addSubview(viewCellContent)
+        self.addSubview(viewCellContent)
         
         NSLayoutConstraint.activate([
-            topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            viewCellContent.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             viewCellContent.trailingAnchor.constraint(equalTo:  trailingAnchor, constant: -10),
             viewCellContent.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             viewCellContent.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
@@ -62,17 +62,17 @@ class ItemCellView: UITableViewCell {
     
     private func setupLabelListName(){
         
-        self.contentView.addSubview(labelItemName)
+        viewCellContent.addSubview(labelItemName)
         
         NSLayoutConstraint.activate([
-            labelItemName.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            labelItemName.topAnchor.constraint(equalTo: viewCellContent.topAnchor, constant: 10),
             labelItemName.trailingAnchor.constraint(equalTo: buttonDimiss.leadingAnchor, constant: -10),
-            labelItemName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10)
+            labelItemName.leadingAnchor.constraint(equalTo: viewCellContent.leadingAnchor, constant: 10)
         ])
     }
     
     private func setupSwitchItemDone(){
-        self.contentView.addSubview(buttonDimiss)
+        viewCellContent.addSubview(buttonDimiss)
         
         NSLayoutConstraint.activate([
             buttonDimiss.topAnchor.constraint(equalTo: topAnchor, constant: 20),
@@ -100,14 +100,10 @@ class ItemCellView: UITableViewCell {
         super.init(style: style, reuseIdentifier: "itemCell")
         
       
-//        setpupViewCellContent()
+        setpupViewCellContent()
         setupSwitchItemDone()
         setupLabelListName()
         
-        self.contentView.backgroundColor = .gray
-
-       
-        self.backgroundColor = .orange
     }
     
     override func layoutSubviews() {

@@ -22,8 +22,8 @@ class ItemListView: UIView {
     
     private let itemListTableView: UITableView = {
        let tableView = UITableView()
-        tableView.allowsSelection = false
-        tableView.backgroundColor = .white
+       // tableView.allowsSelection = false
+        tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -65,7 +65,7 @@ class ItemListView: UIView {
             setupView()
         itemListTableView.delegate = self
         itemListTableView.dataSource = self
-        backgroundColor = .orange
+        backgroundColor = .white
         NotificationCenter.default.addObserver(self, selector: #selector(self.reloadTable(notification:)), name: Notification.Name("DataBaseUpdate"), object: nil)
     }
     
@@ -88,6 +88,11 @@ extension ItemListView: UITableViewDataSource{
         let item = data[indexPath.row]
         cell.fillCell(item: item, itemListViewDelegate: delegate)
         cell.isUserInteractionEnabled = false
+        itemListTableView.separatorStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Hello")
     }
 }
